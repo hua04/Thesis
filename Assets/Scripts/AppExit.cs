@@ -7,12 +7,12 @@ public class AppExit : MonoBehaviour
     public GameObject FileToOpen;
     public void CloseApp()
     {
-        //find file and move it to the front
+       
         int lastPosition = AppClickOpen.openFiles.IndexOf(FileToOpen);
         AppClickOpen.openFiles.RemoveAt(lastPosition);
-        AppClickOpen.openFiles.Add(FileToOpen);
+   
 
-        //update file order
+        //Remove file from list
 
         for (int index = 0; index < AppClickOpen.openFiles.Count; index++)
         {

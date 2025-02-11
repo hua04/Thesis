@@ -349,6 +349,7 @@ MonoBehaviour:
   canvas: {fileID: 1920709747689763611}
   obj: {fileID: 1920709747487993270}
   cam: {fileID: 0}
+  FileToOpen: {fileID: 0}
 --- !u!1 &1920709747689763590
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +364,7 @@ GameObject:
   - component: {fileID: 1920709747689763609}
   m_Layer: 5
   m_Name: WorkApplication
-  m_TagString: Untagged
+  m_TagString: Work
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
