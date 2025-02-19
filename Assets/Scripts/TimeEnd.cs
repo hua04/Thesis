@@ -24,8 +24,8 @@ public class TimeEnd : MonoBehaviour
         timeOfDay = TimeScript.timeOfDayTMP.text;
         if (TimeScript.hour == 06 && timeOfDay == "PM" && !doneAlready)
         {
-            work.text += GameClick.gameClick.ToString();
-            play.text += WorkClick.workClick.ToString();
+            work.text += WorkClick.workClick.ToString();
+            play.text += GameClick.gameClick.ToString();
 
             var temp = GameClick.gameClick - WorkClick.workClick;
             if (temp >= -2 && temp <= 2)
