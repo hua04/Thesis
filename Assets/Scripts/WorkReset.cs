@@ -19,7 +19,7 @@ public class WorkReset : MonoBehaviour
     {
         if (WorkClick.filesClosed % 3 == 0)
         {
-            Debug.Log("hello");
+            
             iconOne.SetActive(true);
             iconTwo.SetActive(true);
             iconThree.SetActive(true);

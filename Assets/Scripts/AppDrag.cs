@@ -22,7 +22,7 @@ public class AppDrag : MonoBehaviour
         int lastPosition = AppClickOpen.openFiles.IndexOf(FileToOpen);
         AppClickOpen.openFiles.RemoveAt(lastPosition);
         AppClickOpen.openFiles.Add(FileToOpen);
-
+        Debug.Log("works");
         //update file order
         for (int index = 0; index < AppClickOpen.openFiles.Count; index++)
         {
