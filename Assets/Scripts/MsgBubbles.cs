@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using TMPro;
 using UnityEditor.PackageManager;
 using UnityEngine;
@@ -62,8 +63,6 @@ public class MsgBubbles : MonoBehaviour
 
         for (int i = count; i < convoLength; i++)
         {
-            yield return new WaitForSeconds(3);
-
             if (npc[i])
             {
                 temp = Instantiate(npcSpeech, npcSpawnLocation.transform);
@@ -72,17 +71,30 @@ public class MsgBubbles : MonoBehaviour
             {
                 temp = Instantiate(playerSpeech, playerSpawnLocation.transform);
             }
-
             var inbetween = temp.transform.GetChild(0);
             var text = inbetween.transform.GetChild(0);
             text.GetComponent<TextMeshProUGUI>().text = convo[i];
-
-            foreach (GameObject sentDialogue in sentDialogue)
-            {
-                sentDialogue.GetComponent<RectTransform>().transform.position += new Vector3(0, 100f, 0);
-            }
             sentDialogue.Add(temp);
+
+            yield return new WaitForEndOfFrame();
+            if((sentDialogue.Count) > 0)
+            {
+                var dist = sentDialogue[sentDialogue.Count - 1].transform.GetChild(0);
+                float height = dist.GetComponent<RectTransform>().rect.height;
+
+                Debug.Log(height);
+
+                foreach (GameObject sentDialogue in sentDialogue)
+                {
+                    sentDialogue.GetComponent<RectTransform>().transform.position += new Vector3(0, height / 2.5f, 0); ;
+                }
+            }
+           
+
+            
             count++;
+
+            yield return new WaitForSeconds(3);
         }
 
         /* if (count == convoLength && Choice.choiceMade == false)
