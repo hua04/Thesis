@@ -9,7 +9,15 @@ public class AppClickOpen : MonoBehaviour
 
     public void Start()
     {
-        FileToOpen.SetActive(false);
+        if (FileToOpen.name!= "GameApp")
+        {
+            FileToOpen.SetActive(false);
+        }
+        else
+        {
+            openFiles.Add(FileToOpen);
+        }
+        
     }
 
     public void OpenFile()

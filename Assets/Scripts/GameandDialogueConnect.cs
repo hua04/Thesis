@@ -6,11 +6,7 @@ public class GameandDialogueConnect : MonoBehaviour
     public GameObject dialogueBox;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        dialogueBox.SetActive(false);
-    }
-
+   
     // Update is called once per frame
     void Update()
     {

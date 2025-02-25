@@ -21,7 +21,10 @@ public class ConvoActive : MonoBehaviour
             Debug.Log(test);
         }
         selectionHighlight = GameObject.FindGameObjectsWithTag("Select");
-
+        if (thisSelect.transform.parent.name!="Boss button")
+        {
+            thisSelect.SetActive(false);
+        }
     }
     public void ConvoSelected()
     {
@@ -29,14 +32,10 @@ public class ConvoActive : MonoBehaviour
         foreach (GameObject select in selectionHighlight)
         {
             select.SetActive(false);
-            /*Vector3 pushBack = select.transform.position;
-            pushBack.z = 0f; 
-            select.transform.position = pushBack; */
+           
         }
         thisSelect.SetActive(true);
-        /*Vector3 pullForward = thisSelect.transform.position;
-        pullForward.z = 0f;
-        thisSelect.transform.position = pullForward;*/
+      
     }
 
     

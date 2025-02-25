@@ -5,6 +5,7 @@ using UnityEngine;
 public class AppExit : MonoBehaviour
 {
     public GameObject FileToOpen;
+    public GameObject popup;
     public void CloseApp()
     {
        
@@ -24,6 +25,10 @@ public class AppExit : MonoBehaviour
 
         //close file
         FileToOpen.SetActive(false);
+        if (popup.activeInHierarchy)
+        {
+            popup.SetActive(false);
+        }
 
       
 

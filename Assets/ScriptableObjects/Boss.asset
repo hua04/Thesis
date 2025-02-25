@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c445ee102e0e3f478c6be110e43216f, type: 3}
   m_Name: Boss
   m_EditorClassIdentifier: 
-  npcTalker: 0100010100010101
+  npcTalker: 01000101010101
   currentConvo:
-  - Hello
-  - sfasfasfasfasfasdsa
-  - Checkin insahjgf iuWKAJHCDiukqwyjsiudyhsaukgdjhsajhgdhjsagd
-  - sfasjhdkuajsh dnikashdsakjd hkj
-  - sfasswwc
-  - ewqewqeqweqweqweqweqweqw
-  - ewqewqeqweqweq
-  - ewqewqeqweqweqweqweqweqw
+  - Where's the file I asked you for?
+  - I don't think you asked me for a file.
+  - I'm sure I did.
+  - The expense write up for last month.
+  - Can you show me where you asked for it?
+  - That's not important right now
+  - I need for you to get to it today
+  - Open your Company Portal
+  - Open your Company Portal
   choiceOne: 
   choiceTwo: 
