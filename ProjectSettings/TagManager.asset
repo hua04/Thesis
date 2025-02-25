@@ -7,6 +7,8 @@ TagManager:
   - Work
   - Personal
   - App
+  - Select
+  - Convo
   layers:
   - Default
   - TransparentFX
