@@ -42,6 +42,8 @@ public class MsgBubbles : MonoBehaviour
 
     public Time timeScript;
 
+    public Animator anim;
+
 
     //public TextMeshProUGUI endingtext;
 
@@ -113,7 +115,11 @@ public class MsgBubbles : MonoBehaviour
                 buttonTwo.interactable = true;
 
             }
-
+            if (npcConvo.end && i == convoLength)
+            {
+                yield return new WaitForSeconds(5);
+                anim.SetTrigger("End");
+            }
 
             yield return new WaitForSeconds(3);
         }

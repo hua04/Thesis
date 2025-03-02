@@ -23,9 +23,12 @@ public class TypingGame : MonoBehaviour
     public GameObject desktopApp;
     public GameObject gameApp;
 
+    public GameObject notif;
+
     void Start()
     {
         SetCurrentWord();
+        notif.SetActive(false);
     }
 
     void SetCurrentWord()
@@ -56,7 +59,7 @@ public class TypingGame : MonoBehaviour
 
                 MoveCursor();
                 EnterLetter(keysPressed); //detects letter press
-                
+
             }
         }
     }
@@ -65,7 +68,7 @@ public class TypingGame : MonoBehaviour
     {
 
         RemoveLetter();
-        
+
 
         if (IsComplete()) //checks if player has completed the typed sentances
         {
@@ -85,7 +88,7 @@ public class TypingGame : MonoBehaviour
         SetRemainingWord(newString);
     }
 
-   void MoveCursor()
+    void MoveCursor()
     {
         if (!IsComplete())
         {
@@ -114,13 +117,15 @@ public class TypingGame : MonoBehaviour
     {
         //if (IsComplete())
         //{
-            Destroy(desktopApp);
-            int lastPosition = AppClickOpen.openFiles.IndexOf(gameApp);
-            AppClickOpen.openFiles.RemoveAt(lastPosition);
-            Destroy(gameApp);
-            
-            timeScript.UpdateTime();
+        Destroy(desktopApp);
+        //int lastPosition = AppClickOpen.openFiles.IndexOf(gameApp);
+        //AppClickOpen.openFiles.RemoveAt(lastPosition);
+        Destroy(gameApp);
 
-       // }
+        timeScript.UpdateTime(15);
+        notif.SetActive(true);
+
+
+        // }
     }
 }

@@ -8,7 +8,7 @@ public class GameandDialogueConnect : MonoBehaviour
     // Start is called before the first frame update
    
     // Update is called once per frame
-    void Update()
+    public void OpenDialogue()
     {
         if (AppClickOpen.openFiles.Count > 0)
         {

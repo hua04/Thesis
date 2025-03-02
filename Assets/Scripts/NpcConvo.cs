@@ -16,4 +16,6 @@ public class NpcConvo : ScriptableObject
     public NpcConvo BranchOne;
     public NpcConvo BranchTwo;
 
+    public bool end;
+
 }

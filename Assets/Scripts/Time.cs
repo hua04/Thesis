@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -23,22 +21,23 @@ public class Time : MonoBehaviour
         hourTMP = temp.GetComponent<TextMeshProUGUI>();
         temp = GameObject.FindGameObjectWithTag("AMPM");
         timeOfDayTMP = temp.GetComponent<TextMeshProUGUI>();
+        UpdateTime(0);
     }
-    public void UpdateTime()
+    public void UpdateTime(int time)
     {
-        min += 15;
+        min += time;
         hour = Convert.ToInt32(hourTMP.text);
         Debug.Log(min + ", " + hour);
-       /* if (min == 60)
-        {
-            hour++;
-            min = 00;
-        }
-        if (hour == 13)
-        {
-            hour = 1;
-            timeOfDayTMP.text = "PM";
-        }*/
+        /* if (min == 60)
+         {
+             hour++;
+             min = 00;
+         }
+         if (hour == 13)
+         {
+             hour = 1;
+             timeOfDayTMP.text = "PM";
+         }*/
         Debug.Log(hour + " : " + min);
 
         string x = min.ToString("D2");
@@ -47,12 +46,13 @@ public class Time : MonoBehaviour
         minTMP.text = x;
         hourTMP.text = y;
 
-        foreach(MsgBubbles bubble in msgScript)
+        foreach (MsgBubbles bubble in msgScript)
         {
-            
-           bubble.start = false;
+
+            bubble.start = false;
         }
-        
+
     }
- 
+        
+
 }

@@ -26,3 +26,4 @@ MonoBehaviour:
   choiceTwo: 
   BranchOne: {fileID: 0}
   BranchTwo: {fileID: 0}
+  end: 1
