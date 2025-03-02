@@ -6,7 +6,7 @@ public class AppClickOpen : MonoBehaviour
     public GameObject FileToOpen;
     public static List<GameObject> openFiles = new List<GameObject>();
 
-    public void Start()
+    public void Awake()
     {
         if (FileToOpen.name!= "GameApp")
         {

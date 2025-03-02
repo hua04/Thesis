@@ -40,6 +40,8 @@ public class MsgBubbles : MonoBehaviour
 
     public Button buttonTwo;
 
+    public Time timeScript;
+
 
     //public TextMeshProUGUI endingtext;
 
@@ -61,12 +63,16 @@ public class MsgBubbles : MonoBehaviour
 
         if (messengerObj.activeInHierarchy && !start)
         {
-            start = true;
-            npcTalker = npcConvo.npcTalker;
-            currentConvo = npcConvo.starterConvo;
-            StartCoroutine(Conversation(currentConvo, currentConvo.Length, npcTalker));
-            start = true;
-            Debug.Log("started");
+            if (npcConvo.min == timeScript.min && npcConvo.hour == timeScript.hour)
+            {
+                start = true;
+                npcTalker = npcConvo.npcTalker;
+                currentConvo = npcConvo.starterConvo;
+                StartCoroutine(Conversation(currentConvo, currentConvo.Length, npcTalker));
+
+                Debug.Log("started");
+            }
+           
         }
     }
 

@@ -8,16 +8,20 @@ public class TypingGame : MonoBehaviour
     //public TextMeshProUGUI timer;
     public GameObject cursor;
     public int cursorGap;
-    public int spaceDown;
+    public float spaceDown;
     public int startSpace;
     public int rightLimit;
     public ScrollRect scroll;
+    public Time timeScript;
 
 
     private string remainingWord;
     private string typedWord;
     public string currentWord = "";
     // public float timeRemaining = 60;
+
+    public GameObject desktopApp;
+    public GameObject gameApp;
 
     void Start()
     {
@@ -83,18 +87,20 @@ public class TypingGame : MonoBehaviour
 
    void MoveCursor()
     {
-        
-        if (cursor.transform.position.x > rightLimit && remainingWord[0]==' ')
+        if (!IsComplete())
         {
-            Vector3 moveDown = cursor.transform.position + new Vector3(0, spaceDown, 0);
-            moveDown.x = startSpace;
-            cursor.transform.position = moveDown;
-            scroll.verticalNormalizedPosition -= 0.03f;
-        }
-        else
-        {
-            Vector3 newPosition = cursor.transform.position + new Vector3(cursorGap, 0, 0);
-            cursor.transform.position = newPosition;
+            if (cursor.transform.localPosition.x > rightLimit && remainingWord[0] == ' ')
+            {
+                Vector3 moveDown = cursor.transform.localPosition + new Vector3(0, spaceDown, 0);
+                moveDown.x = startSpace;
+                cursor.transform.localPosition = moveDown;
+                scroll.verticalNormalizedPosition -= 0.03f;
+            }
+            else
+            {
+                Vector3 newPosition = cursor.transform.localPosition + new Vector3(cursorGap, 0, 0);
+                cursor.transform.localPosition = newPosition;
+            }
         }
     }
 
@@ -102,5 +108,19 @@ public class TypingGame : MonoBehaviour
     {
 
         return remainingWord.Length == 0;
+    }
+
+    public void SubmitPress()
+    {
+        //if (IsComplete())
+        //{
+            Destroy(desktopApp);
+            int lastPosition = AppClickOpen.openFiles.IndexOf(gameApp);
+            AppClickOpen.openFiles.RemoveAt(lastPosition);
+            Destroy(gameApp);
+            
+            timeScript.UpdateTime();
+
+       // }
     }
 }

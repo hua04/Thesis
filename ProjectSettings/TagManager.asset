@@ -9,6 +9,9 @@ TagManager:
   - App
   - Select
   - Convo
+  - Hour
+  - Min
+  - AMPM
   layers:
   - Default
   - TransparentFX
