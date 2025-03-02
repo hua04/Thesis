@@ -11,16 +11,22 @@ public class ConvoActive : MonoBehaviour
     public GameObject thisConvo;
     public GameObject[] selectionHighlight;
     public GameObject thisSelect;
-    public void Start()
+    public void Awake()
     {
         convoCount = convos.transform.childCount;
         allConvos = GameObject.FindGameObjectsWithTag("Convo");
+        selectionHighlight = GameObject.FindGameObjectsWithTag("Select");
+    }
+    public void Start()
+    {
+        
         foreach (GameObject convo in allConvos)
         {
             var test = convo.name;
             Debug.Log(test);
         }
-        selectionHighlight = GameObject.FindGameObjectsWithTag("Select");
+        
+        Debug.Log(selectionHighlight);
         if (thisSelect.transform.parent.name!="Boss button")
         {
             thisSelect.SetActive(false);
@@ -32,8 +38,10 @@ public class ConvoActive : MonoBehaviour
         foreach (GameObject select in selectionHighlight)
         {
             select.SetActive(false);
+            Debug.Log(1);
            
         }
+
         thisSelect.SetActive(true);
       
     }

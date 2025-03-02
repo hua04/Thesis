@@ -7,7 +7,7 @@ Noxx: Ah!
 You are giddily greeted by Nox, their tail swishing in delight as they clasp your hands in theirs.
 Noxx: Welcome back!
  <<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
-Noxx: You've got perfect timing! We just got a tip on the wherabouts kidnapped prince.
+Noxx: You've got perfect timing! We just got a tip on the whereabouts of the kidnapped prince.
  <<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
 Noxx: It seems like we're getting close.
  <<expr ExpressionChangeNoxx "NoxxSpriteHappy">>

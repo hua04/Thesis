@@ -10,13 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c445ee102e0e3f478c6be110e43216f, type: 3}
-  m_Name: Friend
+  m_Name: Boss1.1
   m_EditorClassIdentifier: 
-  hour: 0
+  hour: 8
   min: 0
-  npcTalker: 00000000
-  starterConvo: []
-  choiceOne: []
-  choiceTwo: []
-  BranchOneOne: []
-  BranchOneTwo: []
+  npcTalker: 010100
+  starterConvo:
+  - The person originally working on it quit a week ago
+  - Christ, did no one tell you?
+  - 
+  choiceOne: No.
+  choiceTwo: I don't think so.
+  BranchOne: {fileID: 11400000, guid: 2bda290562397854a8f5cb45be7a4fb6, type: 2}
+  BranchTwo: {fileID: 11400000, guid: 5c2cd558ac9bc064f92b27495d695728, type: 2}

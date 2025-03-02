@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c445ee102e0e3f478c6be110e43216f, type: 3}
+  m_Name: Boss2.2
+  m_EditorClassIdentifier: 
+  hour: 8
+  min: 0
+  npcTalker: 0101010101010101
+  starterConvo:
+  - You 'don't think'?
+  - Yeah, apparently
+  - Nevermind that, I need for it to be done today.
+  - There were some other files I needed done ASAP as well.
+  - I will send the Q1 file first.
+  - It'll be waiting for you within your work portal.
+  - I will send more once you're done.
+  - Get on with it, there's no time to waste.
+  choiceOne: 
+  choiceTwo: 
+  BranchOne: {fileID: 0}
+  BranchTwo: {fileID: 0}

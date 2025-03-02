@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c445ee102e0e3f478c6be110e43216f, type: 3}
-  m_Name: Friend
+  m_Name: BossStarter
   m_EditorClassIdentifier: 
-  hour: 0
+  hour: 8
   min: 0
-  npcTalker: 00000000
-  starterConvo: []
-  choiceOne: []
-  choiceTwo: []
-  BranchOneOne: []
-  BranchOneTwo: []
+  npcTalker: 0100
+  starterConvo:
+  - Where's the Q1 Report?
+  - 
+  choiceOne: That wasn't assigned to me
+  choiceTwo: I thought someone else was handling that?
+  BranchOne: {fileID: 11400000, guid: 3147868f92a4eda42929f6453245e552, type: 2}
+  BranchTwo: {fileID: 11400000, guid: 7d631faa6df6a2642ab3a0df8bca3a8a, type: 2}

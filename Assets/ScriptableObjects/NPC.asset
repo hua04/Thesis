@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c445ee102e0e3f478c6be110e43216f, type: 3}
-  m_Name: Friend
+  m_Name: NPC
   m_EditorClassIdentifier: 
   hour: 0
   min: 0
-  npcTalker: 00000000
+  npcTalker: 
   starterConvo: []
-  choiceOne: []
-  choiceTwo: []
-  BranchOneOne: []
-  BranchOneTwo: []
+  choiceOne: 
+  choiceTwo: 
+  BranchOne: {fileID: 0}
+  BranchTwo: {fileID: 0}

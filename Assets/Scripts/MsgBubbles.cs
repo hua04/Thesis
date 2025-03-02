@@ -1,26 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using TMPro;
-using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MsgBubbles : MonoBehaviour
 {
     public GameObject messengerObj;
 
-    public int count;
+    public int npcCount;
+
+    public int playerCount;
 
     public bool start;
 
-    public static IEnumerator coroutine;
+    public IEnumerator coroutine;
+
     public NpcConvo npcConvo;
 
     public List<GameObject> sentDialogue;
 
-    public static string[] currentConvo; //Dialogue
+    public string[] currentConvo; //Dialogue
 
-    public static bool[] npcTalker;//checks if NPC or player is talking
+    public bool[] npcTalker;//checks if NPC or player is talking
 
     public GameObject npcSpeech; //the speech bubbles
 
@@ -29,6 +31,15 @@ public class MsgBubbles : MonoBehaviour
     public GameObject npcSpawnLocation;
 
     public GameObject playerSpawnLocation;
+
+    public TextMeshProUGUI choiceOne;
+
+    public TextMeshProUGUI choiceTwo;
+
+    public Button buttonOne;
+
+    public Button buttonTwo;
+
 
     //public TextMeshProUGUI endingtext;
 
@@ -40,113 +51,116 @@ public class MsgBubbles : MonoBehaviour
     public void Start()
     {
         start = false;
+        buttonOne.interactable = false;
+        buttonTwo.interactable = false;
+        Debug.Log("on");
     }
 
     public void Update()
     {
 
-        if (messengerObj.activeInHierarchy&& !start)
+        if (messengerObj.activeInHierarchy && !start)
         {
             start = true;
             npcTalker = npcConvo.npcTalker;
-            currentConvo = npcConvo.currentConvo;
+            currentConvo = npcConvo.starterConvo;
             StartCoroutine(Conversation(currentConvo, currentConvo.Length, npcTalker));
             start = true;
+            Debug.Log("started");
         }
     }
 
     public IEnumerator Conversation(string[] convo, int convoLength, bool[] npc) //Start Responses
     {
+
+        Debug.Log("started");
         currentConvo = convo;
         coroutine = Conversation(convo, convoLength, npc);
 
-
-        for (int i = count; i < convoLength; i++)
+        for (int i = npcCount; i < convoLength; i++)
         {
             if (npc[i])
             {
                 temp = Instantiate(npcSpeech, npcSpawnLocation.transform);
+                var inbetween = temp.transform.GetChild(0);
+                var text = inbetween.transform.GetChild(0);
+                text.GetComponent<TextMeshProUGUI>().text = convo[i];
+
+
+                yield return new WaitForEndOfFrame();
+
+                sentDialogue.Add(temp);
+                foreach (GameObject sentDialogue in sentDialogue)
+                {
+                    var dist = temp.transform.GetChild(0);
+                    float height = dist.GetComponent<RectTransform>().rect.height;
+                    RectTransform rt = sentDialogue.GetComponent<RectTransform>();
+                    rt.anchoredPosition += new Vector2(0, height);
+                }
+                npcCount++;
             }
             else if (!npc[i])
             {
-                temp = Instantiate(playerSpeech, playerSpawnLocation.transform);
+                choiceOne.text = npcConvo.choiceOne;
+                choiceTwo.text = npcConvo.choiceTwo;
+                buttonOne.interactable = true;
+                buttonTwo.interactable = true;
+
             }
-            var inbetween = temp.transform.GetChild(0);
-            var text = inbetween.transform.GetChild(0);
-            text.GetComponent<TextMeshProUGUI>().text = convo[i];
-            sentDialogue.Add(temp);
 
-            yield return new WaitForEndOfFrame();
-            if((sentDialogue.Count) > 0)
-            {
-                var dist = sentDialogue[sentDialogue.Count - 1].transform.GetChild(0);
-                float height = dist.GetComponent<RectTransform>().rect.height;
-
-                Debug.Log(height);
-
-                foreach (GameObject sentDialogue in sentDialogue)
-                {
-                    sentDialogue.GetComponent<RectTransform>().transform.position += new Vector3(0, height / 2.5f, 0); ;
-                }
-            }
-           
-
-            
-            count++;
 
             yield return new WaitForSeconds(3);
         }
 
-        /* if (count == convoLength && Choice.choiceMade == false)
-         {
-             choiceScript.ChoiceConvo();
-         }
-         else if (count == convoLength && Choice.choiceMade == true)
-         {
-             if (Choice.betterChoice && ClientPick.amberPick)
-             {
-                 pageSetupScript.feeling.text = "<color=#66ff99>Hopeful</color>";
-             }
-             else if (Choice.betterChoice && ClientPick.krisPick)
-             {
-                 pageSetupScript.feeling.text = "<color=#66ff99>Sad</color>";
-             }
+    }
 
-             yield return new WaitForSeconds(3);
-             foreach (GameObject sentDialogue in sentDialogue)
-             {
-                 sentDialogue.GetComponent<RectTransform>().transform.position += new Vector3(0, 50f, 0);
-             }
-             endingtext.text = "-" + pageSetupScript.nameText.text.ToString() + " has left the chat-";
-             yield return new WaitForSeconds(3);
-             fade.SetTrigger("End");
+    public void ChoiceButton(int choice)
+    {
+        StartCoroutine(Response(choice));
+    }
 
-         }*/
+    public IEnumerator Response(int choice)
+    {
+        NpcConvo nextConvo = npcConvo.BranchOne;
+        temp = Instantiate(playerSpeech, playerSpawnLocation.transform);
+        var inbetween = temp.transform.GetChild(0);
+        var text = inbetween.transform.GetChild(0);
+
+        if (choice == 1)
+        {
+            text.GetComponent<TextMeshProUGUI>().text = npcConvo.choiceOne;
+            nextConvo = npcConvo.BranchOne;
+
+        }
+        else if (choice == 2)
+        {
+            text.GetComponent<TextMeshProUGUI>().text = npcConvo.choiceTwo;
+            nextConvo = npcConvo.BranchTwo;
+        }
+        yield return new WaitForEndOfFrame();
+        var dist = temp.transform.GetChild(0);
+        float height = dist.GetComponent<RectTransform>().rect.height;
+        Debug.Log(height);
+        sentDialogue.Add(temp);
+        foreach (GameObject sentDialogue in sentDialogue)
+        {
+            RectTransform rt = sentDialogue.GetComponent<RectTransform>();
+            rt.anchoredPosition += new Vector2(0, height);
+        }
+
+        choiceOne.text = "";
+        choiceTwo.text = "";
+        buttonOne.interactable = false;
+        buttonTwo.interactable = false;
+
+        npcCount = 0;
+        yield return new WaitForSeconds(3);
+        npcConvo = nextConvo;
+
+
+        StartCoroutine(Conversation(npcConvo.starterConvo, npcConvo.starterConvo.Length, npcConvo.npcTalker));
+
 
 
     }
-
-
-
-
-   /* public IEnumerator PlayerConversation()
-    {
-
-        foreach (GameObject sentDialogue in sentDialogue)
-        {
-            sentDialogue.GetComponent<RectTransform>().transform.position += new Vector3(0, 100f, 0);
-        }
-        var temp = Instantiate(playerSpeech, playerSpawnLocation.transform);
-        var text = temp.transform.GetChild(0);
-        text.GetComponent<TextMeshProUGUI>().text = Typer.typedWord;
-        Typer.typedWord = "";
-        sentDialogue.Add(temp);
-        typerScript.wordOutput.text = "";
-        yield return new WaitForSeconds(1);
-
-        StartCoroutine(Conversation(currentConvo, currentConvo.Length, currentResponses));
-
-    }*/
-
-
 }
