@@ -5,7 +5,7 @@ public class AppClickOpen : MonoBehaviour
 {
     public GameObject FileToOpen;
     public static List<GameObject> openFiles = new List<GameObject>();
-
+    private static List<GameObject> starterFiles = new List<GameObject> ();
     public void Awake()
     {
         if (FileToOpen.name!= "GameApp")
@@ -15,6 +15,15 @@ public class AppClickOpen : MonoBehaviour
         else
         {
             openFiles.Add(FileToOpen);
+        }
+
+      for(int i = 0; i < openFiles.Count - 1; i++) //checking for null files from last run
+        {
+            var file = openFiles[i];
+            if(file == null)
+            {
+                openFiles.Remove(file);
+            }
         }
         
     }

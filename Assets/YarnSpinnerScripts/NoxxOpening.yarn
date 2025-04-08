@@ -1,6 +1,7 @@
 ﻿title: Start
 tags:
 ---
+<<wait 2>>
  <<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
 Noxx: Ah!
  <<expr ExpressionChangeNoxx "NoxxSpriteJoy">>
@@ -45,6 +46,6 @@ Noxx: How are you? How have you been?
 <<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
 They release your hands and step back.
 Noxx: So regarding the prince-
-<<interrupt Interrupt>>
+<<notif MessengerIcon>>
 
 ===

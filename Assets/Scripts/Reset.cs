@@ -8,7 +8,10 @@ public class Reset : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        if (FindObjectsOfType<Reset>().Length == 1)
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
 
     // Update is called once per frame

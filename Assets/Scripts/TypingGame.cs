@@ -1,34 +1,41 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class TypingGame : MonoBehaviour
 {
     public TextMeshProUGUI wordOutput;
     //public TextMeshProUGUI timer;
     public GameObject cursor;
-    public int cursorGap;
-    public float spaceDown;
-    public int startSpace;
-    public int rightLimit;
+    public float lastY;
+    public float currentY;
+    //public int cursorGap;
+    //public float spaceDown;
+    //public int startSpace;
+    //public int rightLimit;
     public ScrollRect scroll;
-    public Time timeScript;
+    public ClockTime timeScript;
+    public Vector3 cursorLocation;
 
 
     private string remainingWord;
-    private string typedWord;
+    public string typedWord;
+    [TextArea(3,7)]
     public string currentWord = "";
     // public float timeRemaining = 60;
 
     public GameObject desktopApp;
     public GameObject gameApp;
+    public Notifications notifications;
 
-    public GameObject notif;
+   // public GameObject notif;
 
     void Start()
     {
         SetCurrentWord();
-        notif.SetActive(false);
+        //notif.SetActive(false);
+        currentY = cursor.transform.position.y;
     }
 
     void SetCurrentWord()
@@ -39,7 +46,9 @@ public class TypingGame : MonoBehaviour
     void SetRemainingWord(string newString)
     {
         remainingWord = newString;
-        wordOutput.text = "<b>" + typedWord + "</b>" + "<color=white>" + remainingWord + "</color>";//Creates color difference between word already typed and not yet typed
+        wordOutput.text = "<b>" + typedWord + "</b>";
+        
+          //wordOutput.text = "<b>" + typedWord + "</b>" + "<color=white>" + remainingWord + "</color>";//Creates color difference between word already typed and not yet typed
     }
 
     // Update is called once per frame
@@ -56,18 +65,21 @@ public class TypingGame : MonoBehaviour
             string keysPressed = Input.inputString;
             if (keysPressed.Length == 1)
             {
-
-                MoveCursor();
-                EnterLetter(keysPressed); //detects letter press
+               /* if (wordOutput.textInfo.characterCount != 0)
+                {
+                    cursor.transform.localPosition = wordOutput.textInfo.characterInfo[wordOutput.textInfo.characterCount - 1].bottomLeft;
+                }*/
+                EnterLetter(); //detects letter press
 
             }
         }
     }
 
-    void EnterLetter(string typedLetter)
+    void EnterLetter()
     {
 
         RemoveLetter();
+        UpdateCursorPosition();
 
 
         if (IsComplete()) //checks if player has completed the typed sentances
@@ -88,25 +100,31 @@ public class TypingGame : MonoBehaviour
         SetRemainingWord(newString);
     }
 
-    void MoveCursor()
+
+    private void UpdateCursorPosition()
     {
-        if (!IsComplete())
+        lastY = currentY;
+        // Make sure this text mesh is actually updated before we do the next calculations
+        wordOutput.ForceMeshUpdate();
+        TMP_TextInfo textInfo = wordOutput.textInfo;
+        int characterPosition = Mathf.Max(0, textInfo.characterCount - 1);
+        TMP_CharacterInfo lastChar = textInfo.characterInfo[characterPosition];
+        var localPosition = new Vector2(
+            lastChar.topRight.x + 10, // arbitrary x offset
+            (lastChar.baseLine + 13) // arbitrary height offset
+        );
+
+        var anchoredPosition = localPosition;
+
+        cursor.transform.localPosition = anchoredPosition;
+        cursor.gameObject.SetActive(true);
+        currentY = cursor.transform.position.y;
+        Debug.Log(currentY + "," + lastY);
+         if (currentY != lastY && currentY <= 140f)
         {
-            if (cursor.transform.localPosition.x > rightLimit && remainingWord[0] == ' ')
-            {
-                Vector3 moveDown = cursor.transform.localPosition + new Vector3(0, spaceDown, 0);
-                moveDown.x = startSpace;
-                cursor.transform.localPosition = moveDown;
-                scroll.verticalNormalizedPosition -= 0.03f;
-            }
-            else
-            {
-                Vector3 newPosition = cursor.transform.localPosition + new Vector3(cursorGap, 0, 0);
-                cursor.transform.localPosition = newPosition;
-            }
+            scroll.verticalNormalizedPosition -= 0.01f;
         }
     }
-
     bool IsComplete()
     {
 
@@ -115,17 +133,17 @@ public class TypingGame : MonoBehaviour
 
     public void SubmitPress()
     {
-        //if (IsComplete())
-        //{
+        if (IsComplete())
+        {
         Destroy(desktopApp);
-        //int lastPosition = AppClickOpen.openFiles.IndexOf(gameApp);
-        //AppClickOpen.openFiles.RemoveAt(lastPosition);
+        int lastPosition = AppClickOpen.openFiles.IndexOf(gameApp);
+        AppClickOpen.openFiles.RemoveAt(lastPosition);
         Destroy(gameApp);
 
         timeScript.UpdateTime(15);
-        notif.SetActive(true);
+       // notif.SetActive(true);
 
 
-        // }
+         }
     }
 }

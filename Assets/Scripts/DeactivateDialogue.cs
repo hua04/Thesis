@@ -7,6 +7,10 @@ public class DeactivateDialogue : MonoBehaviour
     public GameObject canvas;
     public Animator anim;
 
+    public void Start()
+    {
+        Close();
+    }
     public void Close()
     {
         anim.SetTrigger("Close");

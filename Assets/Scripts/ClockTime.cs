@@ -2,7 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 
-public class Time : MonoBehaviour
+public class ClockTime : MonoBehaviour
 {
     public int min;
     public int hour;
@@ -52,6 +52,7 @@ public class Time : MonoBehaviour
             bubble.start = false;
         }
 
+        EventQueue.instance.CheckForEvent(hour, min);
     }
         
 

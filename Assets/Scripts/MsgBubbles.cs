@@ -40,7 +40,7 @@ public class MsgBubbles : MonoBehaviour
 
     public Button buttonTwo;
 
-    public Time timeScript;
+    public ClockTime timeScript;
 
     public Animator anim;
 

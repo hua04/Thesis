@@ -25,7 +25,7 @@ public class AppExit : MonoBehaviour
 
         //close file
         FileToOpen.SetActive(false);
-        if (popup.activeInHierarchy)
+        if (popup!=null)
         {
             popup.SetActive(false);
         }
