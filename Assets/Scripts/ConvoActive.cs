@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ConvoActive : MonoBehaviour
@@ -11,6 +8,8 @@ public class ConvoActive : MonoBehaviour
     public GameObject thisConvo;
     public GameObject[] selectionHighlight;
     public GameObject thisSelect;
+   // public EventQueue eventQueue;
+   // public Location thisLocation;
     public void Awake()
     {
         convoCount = convos.transform.childCount;
@@ -19,31 +18,37 @@ public class ConvoActive : MonoBehaviour
     }
     public void Start()
     {
-        
-        foreach (GameObject convo in allConvos)
+        if (thisConvo.transform.name != "BossConvo")
         {
-            var test = convo.name;
-            Debug.Log(test);
+            thisConvo.transform.Find("Dialogue Canvas").gameObject.SetActive(false);
         }
-        
-        Debug.Log(selectionHighlight);
-        if (thisSelect.transform.parent.name!="Boss button")
+
+
+        if (thisSelect.transform.parent.name != "BossSelect")
         {
             thisSelect.SetActive(false);
         }
     }
     public void ConvoSelected()
     {
-        thisConvo.transform.SetSiblingIndex(convoCount-1);
+        foreach (GameObject convo in allConvos)
+        {
+            convo.transform.Find("Dialogue Canvas").gameObject.SetActive(false);
+
+        }
+        thisConvo.transform.Find("Dialogue Canvas").gameObject.SetActive(true);
         foreach (GameObject select in selectionHighlight)
         {
             select.SetActive(false);
-            Debug.Log(1);
-           
-        }
 
+
+        }
         thisSelect.SetActive(true);
-      
+
+
+       // eventQueue.CheckForLocation(thisLocation);
+
+
     }
 
 }

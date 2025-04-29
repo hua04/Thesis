@@ -29,7 +29,7 @@ public class TypingGame : MonoBehaviour
     public GameObject gameApp;
     public Notifications notifications;
 
-   // public GameObject notif;
+   //public GameObject notif;
 
     void Start()
     {
@@ -60,7 +60,7 @@ public class TypingGame : MonoBehaviour
 
     void CheckInput()
     {
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown&gameApp.activeInHierarchy)
         {
             string keysPressed = Input.inputString;
             if (keysPressed.Length == 1)
@@ -70,7 +70,8 @@ public class TypingGame : MonoBehaviour
                     cursor.transform.localPosition = wordOutput.textInfo.characterInfo[wordOutput.textInfo.characterCount - 1].bottomLeft;
                 }*/
                 EnterLetter(); //detects letter press
-
+                EnterLetter();
+                EnterLetter();
             }
         }
     }
@@ -131,7 +132,7 @@ public class TypingGame : MonoBehaviour
         return remainingWord.Length == 0;
     }
 
-    public void SubmitPress()
+    public void SubmitPress(int num)
     {
         if (IsComplete())
         {
@@ -140,8 +141,8 @@ public class TypingGame : MonoBehaviour
         AppClickOpen.openFiles.RemoveAt(lastPosition);
         Destroy(gameApp);
 
-        timeScript.UpdateTime(15);
-       // notif.SetActive(true);
+        timeScript.UpdateTime(num);
+            notifications.NotifOn();
 
 
          }

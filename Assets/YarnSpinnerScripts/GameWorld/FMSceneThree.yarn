@@ -1,0 +1,255 @@
+﻿title: FMSceneThree
+tags:
+---
+[Fade in]
+Noxx: Heya!
+Noxx: ...
+Noxx: You look kinda upset, did something happen?
+-> “I don’t want to talk about it”
+	<i>They nod understandingly</i>
+	Noxx: I gotcha.
+	Noxx: Let’s see if we can take your mind off it for a bit.
+-> “Everything is fine.”
+	Noxx: Gotcha,
+	<i> It’s clear by the look on Noxx’s face that they aren’t entirely convinced</i>
+	<i> But they’ve never been one to press for answers</i>
+	Noxx: So-
+-> “My boss is a dick”
+	Noxx: Whoa...!
+	<i> Noxx seems taken aback by your sudden venom </i>
+	Noxx: That bad, huh?
+	Noxx: …Look, it’s obviously much easier said than done,
+	Noxx: But I really think you should start looking at some other options
+	Noxx: It can’t be worth all this misery…
+	Noxx: It’s better to try for a happy life, despite the bumpy road to get there, you know?
+	-> “Yeah, I know”
+		Noxx: It’s intimidating to think about all of this now, but I know you’ve got it in you.
+		Noxx: You’re wonderful, and there are people out there who will honor that instead of finding ways to take advantage of you.
+		Noxx: Anyways-
+	-> “I don’t think you quite understand just how little control I have over this”
+		Noxx: I think you’re greatly underestimating yourself…
+		Noxx: But at the end of the day, you know yourself best.
+		Noxx: Anyways- 
+-> “I screwed up at work.”
+	Noxx: I’m sorry to hear that, is everyone okay?
+	-> “What?”
+		Noxx: As in, did anyone get hurt?
+		-> “No, just some screwed up files”
+			<i> They scrunch up their face in irritation</i>
+	-> “It wasn’t anything that drastic.”
+		Noxx: Hm.
+	<i> Their voice has an edge of exasperation to it when they speak</i>
+	Noxx: Mistakes are bound to happen, it’s part of being mortal.
+	Noxx: Your work is ridiculous, making you stress over something so minor.
+	<i> They look you in the eyes, voice gentle and deathly serious </i>
+	Noxx: It’s impossible to go through life without slipping up, don’t beat yourself up over it
+	Noxx: The only thing to do is to learn and move forward, no need to torture yourself over it, okay?
+	-> “Okay”
+		<i> Noxx smiles at you </i>
+	-> “But I’ve made things harder for the people around me”
+		<i> Noxx’s eyes soften</i>
+		Noxx: And they have done the same to others at some point, they’d be hypocrites to hold it against you.
+		Noxx: Now, shall we get back to our adventure?
+Noxx: While you were away I scouted up ahead and uhh…
+Noxx: Here, let me show you
+<i> You and Noxx walk deeper into the forest</i>
+<i> The trees around you get denser and denser, and by the time you stop at the mouth of the cave, it seems to be the only way forward</i>
+Noxx: I looked around and this seems to be the only way forward.
+Noxx: We could spend more time looking around to see if there are any other options, but that would eat up our time, and we still may not be able to find any way around it.
+<i> You peer into the cave, trying to scrape together more information</i>
+<i> But there’s… nothing. The oppressive silence and darkness looming within the cave gives the feeling of… emptiness</i>
+-> “This cave gives me a bad feeling…”
+	<i> Noxx shudders next to you</i>
+	Noxx: Hard agree with you there
+	Noxx: But I’m afraid we might not have any other option at this point
+-> “I’m sure we can handle the cave!”
+	<i> Noxx laughs next to you</i>
+	Noxx: Love the enthusiasm
+	Noxx: I’m glad at least one of us feels confident about this
+	-> “You don’t?”
+		Noxx: Nope.
+		Noxx: It gives me the intense creeps
+	-> “I’ll gladly fulfill my role as the team’s morale booster.”
+		<i>Noxx doesn’t make any attempt to hide their amusement at your declaration</i>
+		Noxx: That’s… certainly a role.
+		Noxx: You know what? I’ll give it to you though.
+		Noxx: This adventure would be nowhere near as fun without you.
+<i>Turning back to the cave, Noxx reaches their hand out to you</i>
+Noxx: Ready?
+-> Grab their hand
+	-> “As ready as I’ll ever be”
+		<i> Noxx nods in agreement </i>
+		Noxx: Can’t think of a better way to put it
+	-> “No, but what choice do we have?”
+		<i>Noxx squeezes your hand wordlessly</i>
+	-> “Yes”
+		Noxx: Excellent
+<i> Noxx holds out their free hand, an orb of light appearing as they chant some words</i>
+<i> As the two of you cross the threshold together, you shiver </i>
+<i> It doesn’t quite feel cold, but there’s something so still and unnatural feeling about the space you’ve entered</i>
+<i>As you come to terms with this feeling, you also realize that the sounds of your footsteps seem to be fading alongside the light in Noxx’s hand</i>
+-> “Noxx?”
+	<i>As the words leave your mouth, you realize that they had been noiseless</i>
+-> “What’s happening?”
+	<i>As the words leave your mouth, you realize that they had been noiseless</i>
+-> Pull at Noxx’s hand
+	<i>You realize with some horror that at some point you must have let go without realizing, as the familiar weight is gone from your palm</i>
+<i>In a panic, you turn to look at your companion, only to be met with complete darkness</i>
+<i> No matter where you turn, you are met with utter nothingness</i>
+<i> No light, no sound, not even the slightest sensation</i>
+<i> Even turning back to where the cave opening had been moments ago does nothing to change this</i>
+<i> It’s all empty, and you are alone</i>
+<i>...</i>
+<i> What would you like to do?</i>
+-> Scream
+	<i> You fill your lungs, unhinging your jaw as you push all the air out with all the desperation and confusion that crackles through your body</i>
+	<i> Yet your burning lungs and aching throat are the only evidence of your efforts</i>
+	<i> No matter how much you scream and scream</i>
+	<i> You’re met with a deafening silence.
+-> Keep walking
+	<i> Regardless of the strange situation you find yourself in, you continue to move forward</i>
+	<i> Step by step, you strain your senses for anything</i>
+	<i> Any sign of an end to this oppressive nothingness</i>
+	<i> Yet no matter how much you walk, your surroundings are unyieldingly barren, hollow of any detail</i>
+-> Feel around the area
+	<i> Dropping to your knees, you start at the ground, as surely there would be something there</i>
+	<i> You reach down…</i>
+	<i> down…</i>
+	<i> down…</i>
+	<i> But your hand never meets anything</i>
+	<i> Despite the fact that you are clearly within a space, you can’t feel any of your limits within it</i>
+<i> What would you like to do?<i>
+-> Give up
+	</i> There’s clearly something going on here that’s beyond your comprehension, something that you lack the power to transcend</i>
+	<i> You fall limp, allowing your body rest as you search for a sign of something, anything, that could give you a fighting chance </i>
+	<i> You resign yourself to the stillness that surrounds you, straining your ears and eyes… </i>
+	<i> You wait… </i>
+	<i> and wait… </i>
+	<i> and wait…</i>
+	<i> and…</i>
+-> Keep going
+	<i> There’s nothing else to do, so you push on ahead</i>
+	<i> With unparalleled determination, you put your everything behind your efforts, searching for something, anything, to give you a fighting chance against this oppressive nothingness</i>
+	<i> You keep going…</i>
+	<i> and going… </i>
+	<i> and going…</i>
+	<i> and…</i>
+<b> Would you be able to accept that this might be it?</b>
+<b> What an unceremonious end</b>
+<b> Yet that’s how it is for many</b>
+<b> Few are actually blessed with a blaze of glory to see them off</b>
+<b> And you…</b>
+<b> What is remarkable enough about you to warrant such a destiny?</b>
+<b> Surely you always knew how it would end</b>
+<b> Quiet and passive… how fitting</b>
+<b> Everyone would like to imagine themselves as a grand hero, yet always settle into mundane complacency</b>
+<b> Glory without sacrifice, a mirage indeed</b>
+<b>...</b>
+???: ...dear…
+<b> Hm?</b>
+<b>... perhaps… it is not over after all </b>
+???: …my… dear…
+<b> A second wind blows in…</b>
+<i> A shock of warmth encircles your wrist</i>
+???: Come with me!
+<i> Though you still have no sense of your surroundings, you sense yourself being pulled through the space</i>
+<i> You are guided by some unseen entity, only known through pressure on your wrist and the brief whispers that had reached you</i>
+<i> You don’t know what this is, nor where it is taking you </i>
+<i> Yet what other choice do you have?</i>
+(FLASH)
+<i>You’re outside…</i>
+Noxx: My dear adventurer!!!
+<i> Noxx lets go of your wrist to pull you into a frenzied hug, burying their head into your shoulder </i>
+Noxx: I’m sorry, I’m so sorry…
+<i> They’re trembling as they babble out apologies, clinging to you with an uncharacteristic desperation </i>
+-> “I’m okay!”
+	<i> At your words they fall silent, yet they refuse to let go of you, still shaking like a leaf</i>
+-> “It’s not your fault”
+	Noxx: I should have found some other way… I shouldn’t have put you in that situation.
+	<i> Their grip on you tightens as they continue to shake</i>
+->”How did you do that?”
+	<i> Noxx lets out a shaky breath…</i>
+	<i> They don’t answer</i>
+<i> There’s something unnerving about this situation</i>
+-> “Noxx, are you okay?”
+	<i> They mumble something into your shoulder </i>
+	-> “Huh?”
+		<i> You feel them take several deep breaths</i>
+		<i> They pull away from your shoulder</i> 
+	-> Stay silent
+		<i> Taking their time, they steady their breath before slowly pulling away from your shoulder</i>
+-> “Can you let go now?”
+	<i> Noxx flinches away from you as if they’d been burned<i>
+	Noxx: Sorry!
+	<i> It seems that you’ve managed to ground them back into their usual overly considerate self </i>
+	<i> But-</i>
+-> “Noxx, look at me.”
+	<i> They go completely rigid</i>
+	<i> You can feel their heartbeat, frenzied and erratic</i>
+	<i> They slowly pull away from you</i>
+(Eyeless image)
+<i> Noxx’s remaining eye looks away, unable to meet your gaze</i>
+-> Gasp
+	<i> Noxx flinches at the sound, reaching up to cover their missing eye</i>
+	Noxx: It was the only thing I could think of to trade… I’m so sorry.
+	-> “Why are you apologizing?!”
+		<i> Noxx opens and closes their mouth a few times before just giving up and shaking their head</i>
+	-> “Don’t apologize”
+			Noxx: Sor-
+			<i> They catch themselves and snap their mouth shut, giving you a curt nod instead</i>
+-> “What happened?!”
+	<i> Noxx takes a deep breath</i>
+	Noxx: It was the only thing I could think of to get us out of there.
+	Noxx: I didn’t have enough power from my normal offerings to overpower a force like that.
+	Noxx: So I had to offer something more.
+-> “I’m so sorry!”
+	<i> Noxx shakes their head</i>
+	Noxx: You didn’t do anything, I made my choice.
+	Noxx: It was the only thing I could think to trade…
+<i> They reach up to ghost their fingers around their brow bone, as if to subtly obscure their empty socket from your view</i>
+<i> You’ve never seen them like this before, the carefree and playful demeanor you’ve grown used to nowhere to be seen</i>
+Noxx: I’ll be alright.
+<i> As if reading your thoughts, they glance over at you with a small, forced smile</i>
+Noxx: It will take a little getting used to, but I’ll be fine in the end.
+<i> Their words are shaky, almost as if they’re trying to convince themselves along with you</i>
+<i> They sigh, slumping down onto the ground</i>
+Noxx: I told myself I was ready and okay for anything to happen on this quest , but for it to actually happen…
+<i> Noxx stares at the ground</i>
+Noxx: ... I will be okay.
+<i> They fall silent, seemingly lost in their thoughts </i>
+Noxx: Can we… can we take a break here for a little bit?
+-> “Of course”
+	Noxx: Thank you.
+	Noxx: It won’t be long, I promise
+-> “But what about the prince?”
+	Noxx: The silver lining to all of this is that we exited on the other side of the cave.
+	Noxx: So we’re almost through the primordial forest.
+	Noxx: I only need a little break, okay?
+	Noxx: We’ll get back to the prince soon.
+	-> “Alright”
+<i>They pat the ground next to them</i>
+-> You sit next to them
+	<i>Noxx scotches closer to you, almost hesitantly</i>
+	-> Do nothing
+		<i> Noxx takes a deep breath in, exhaling a deep breath</i>
+			Noxx: Thank you for being here with me.
+			<i> They close their eye, relaxing into the ground </i>
+			<<stop>>
+	-> Reach out for their hand
+		<i> You gently place their hand over theirs, and they instantly relax</i>
+		<i>With what feels like the first genuine smile you’ve seen out of them since leaving the cave, they lean over to rest their head on your shoulder</i>
+		Noxx: Thank you for… everything.
+		Noxx: I’m so happy that out of everyone, you’re here on this journey with me.
+		<i> They close their eye, relaxing into your side</i>
+		<<stop>>
+	-> Lay your head on their shoulder
+		<i> As you make yourself comfortable next to them, you see them smile out of the corner of your eye</i>
+		Noxx: I’m so glad you’re here with me, thank you.
+		<i> They close their eye, relaxing into the ground</i>
+		<<stop>>
+-> You sit down where you stand, across from them
+	<i> Noxx smiles weakly</i>
+	<i> They take a deep breath, closing their eye</i>
+	<<stop>>
+
+===

@@ -38,7 +38,8 @@ namespace Yarn.Unity.Example
             runner.AddCommandHandler( "Me", SetSenderMe ); // registers Yarn Command <<Me>>, which sets the current message sender to "Me"
             runner.AddCommandHandler( "Them", SetSenderThem ); // registers Yarn Command <<They>>, which sets the current message sender to "Them" (whoever the player is talking to)
 
-            optionsContainer.SetActive(false);
+            optionsContainer.SetActive(true);
+            //optionsContainer.SetActive(false);
         }
 
         void Start () 
@@ -136,7 +137,7 @@ namespace Yarn.Unity.Example
                 Destroy(child.gameObject);
             }
 
-            optionsContainer.SetActive(true);
+            
 
             for (int i = 0; i < dialogueOptions.Length; i++)
             {
@@ -149,8 +150,13 @@ namespace Yarn.Unity.Example
 
                 optionView.OnOptionSelected = (selectedOption) =>
                 {
-                    optionsContainer.SetActive(false);
+                    //optionsContainer.SetActive(false);
                     onOptionSelected(selectedOption.DialogueOptionID);
+                    optionView.Option = option;
+                    foreach (Transform child in optionsContainer.transform)
+                    {
+                        Destroy(child.gameObject);
+                    }
                 };
             }
         }

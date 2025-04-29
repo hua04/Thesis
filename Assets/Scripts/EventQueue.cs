@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn;
+using Yarn.Unity;
 
 public class EventQueue : MonoBehaviour
 {
@@ -36,7 +38,7 @@ public class EventQueue : MonoBehaviour
         }
     }
 
-    //  none, bossChat, friendChat, coworkerOneChat, coworkerTwoChat, onlineFriendChat, gameWindow (6)
+//  none, bossChat, friendChat, coworkerOneChat, coworkerTwoChat, onlineFriendChat, gameWindow (6)
     // 0, 1, 2, 3 ,4 , and so on
     public void SendLocation(int locationNum)
     {
@@ -58,22 +60,26 @@ public class EventQueue : MonoBehaviour
     public void RunEvent(EventTrigger current)
     {
         Debug.Log(current.nodeName);
-        //REPLACE LATER
+        current.dialogueRunner.StartDialogue(current.nodeName);
+        AvailableEvents.Remove(current);
     }
 }
 
 [System.Serializable]
 public class EventTrigger
 {
+    public string scriptTitle;
     public string nodeName;
     public int hour;
     public int min;
     public Location eventLocation;
+    public TextAsset script;
+    public DialogueRunner dialogueRunner; 
 
 }
 
 [System.Serializable]
 public enum Location
 {
-    none, bossChat, friendChat, coworkerOneChat, coworkerTwoChat, onlineFriendChat, gameWindow
+    none, bossChat, friendChat, coworkerOneChat, onlineFriendChat,coworkerTwoChat,  gameWindow
 }

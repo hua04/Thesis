@@ -1,0 +1,55 @@
+﻿title: Coworker9PM
+tags:
+---
+<<Them>>
+Hiiii, so I need some help with some work.
+<<wait 3>>
+I have a couple of files that I’m behind on.
+-> Sure, send it over
+	<<Me>>
+	Sure, send it over
+	<<Them>>
+	<<wait 1>>
+	Thank youuu
+	<<wait 3>>
+	I already let the boss know you were handling it, so just send them to him once you’re done.
+	<<wait 1>>
+	Files sent!
+	<<Stop>>
+-> Uhh, I kinda have my hands full already.
+	<<Me>>
+	Uhh, I kinda have my hands full already.
+	<<Them>>
+	<<wait 1>>
+	Aw comeon.
+	<<wait 2>>
+	I helped you with that file last quarter, didn’t I?
+	<<wait 2>>
+	So I’m counting on you to return the favor.
+	-> That was completely different
+		<<Me>>
+		That was completely different
+		<<wait 3>>
+		The only reason I asked for your input is because I didn’t have access to the right files.
+		<<Them>>
+		<<wait 1>>
+		That’s still help isn’t it
+		<<wait 2>>
+		I already told boss that you were doing them.
+		<<wait 2>>
+		So I’ll just send them over, ok?
+		<<wait 1>>
+		Files sent!
+		<<Stop>>
+	-> Ok yeah that’s fair
+		<<Me>>
+		Ok yeah that’s fair
+		<<Them>>
+		<<wait 1>>
+		Yep Yep.
+		<<wait 3>>
+		I already let the boss know you were handling it, so just send them to him once you’re done.
+		<<wait 1>>
+		Files sent!
+		<<Stop>>
+===

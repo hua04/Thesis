@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using Yarn.Unity;
 
 public class ClockTime : MonoBehaviour
 {
@@ -17,26 +18,30 @@ public class ClockTime : MonoBehaviour
     {
         var temp = GameObject.FindGameObjectWithTag("Min");
         minTMP = temp.GetComponent<TextMeshProUGUI>();
+
         temp = GameObject.FindGameObjectWithTag("Hour");
         hourTMP = temp.GetComponent<TextMeshProUGUI>();
         temp = GameObject.FindGameObjectWithTag("AMPM");
         timeOfDayTMP = temp.GetComponent<TextMeshProUGUI>();
         UpdateTime(0);
+        EventQueue.instance.CheckForEvent(hour, min);
     }
+
+    [YarnCommand("timepass")]
     public void UpdateTime(int time)
     {
         min += time;
         hour = Convert.ToInt32(hourTMP.text);
         Debug.Log(min + ", " + hour);
-        /* if (min == 60)
+         if (min == 60)
          {
              hour++;
              min = 00;
          }
-         if (hour == 13)
+         /*if (hour == 13)
          {
              hour = 1;
-             timeOfDayTMP.text = "PM";
+             
          }*/
         Debug.Log(hour + " : " + min);
 
@@ -46,11 +51,11 @@ public class ClockTime : MonoBehaviour
         minTMP.text = x;
         hourTMP.text = y;
 
-        foreach (MsgBubbles bubble in msgScript)
+        /*foreach (MsgBubbles bubble in msgScript)
         {
 
             bubble.start = false;
-        }
+        }*/
 
         EventQueue.instance.CheckForEvent(hour, min);
     }

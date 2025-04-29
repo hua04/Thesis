@@ -1,0 +1,268 @@
+﻿title: FMSceneTwo
+tags:
+---
+[Fade in]
+Noxx: Back already?
+-> Yup, let’s get back to it!
+	Noxx: I like your enthusiasm, let’s go!
+-> Yeah, how are you holding up
+	Noxx: I’m all good, you don’t need to worry about me!
+	Noxx: A little break was just what I needed, and now I’m ready to go!
+<i> The two of you set off deeper into the forest with a renewed burst of energy</i>
+Noxx: Soooo, can I hear more about what’s been keeping you so busy these days?
+-> “I don’t really wanna talk about that now”
+	Noxx: I getcha, seems stressful, whatever it is,
+	Noxx: I hope you’re taking care of yourself though
+	Noxx: No working yourself into the ground on my watch (wink)
+	<i> The two of you continue in a comfortable relative silence, with Noxx pointing out interesting pieces of scenery every so often </i>
+-> “Its not really anything interesting”
+	Noxx: I don’t mind! I just want to hear about how you’ve been doing.
+	-> “I’d rather not”
+		<i> Noxx nods understandingly, taking your answer in stride</i>
+		Noxx: Gotcha!
+		<i> The two of you continue in a comfortable relative silence, with Noxx pointing out interesting pieces of scenery every so often </i>
+	-> “I work for a company…”
+		<i> You fill Noxx in, telling them about the copious amounts of paperwork you’re assigned and the flurry of demanding messages you’re buried under on a daily basis</i>
+		Noxx: So what does this company of yours do?
+		-> “I don’t really know”
+			<i>Noxx blinks at you in surprise </i>
+			Noxx: Really?
+			-> “I don’t really care enough to involve myself in more than I need to.”
+				Noxx: I see
+			-> “ I pretty much only get the info I need to know, everything else is kind of a mystery.”
+				Noxx: Aren’t you curious though?
+				-> “It hadn’t really occurred to mebefore. “
+					Noxx: Interesting.
+		Noxx: It doesn’t really sound like you enjoy this work that much
+		-> “I don’t, really”
+			Noxx: That’s unfortunate…
+		-> “Well, it pays reasonably""
+			Noxx: That makes sense.
+		-> “I’ve never really considered work something to ‘enjoy’”
+			<i> Noxx’s face falls at your admission</i>
+			Noxx: That’s a disappointing way to live…
+		Noxx: Have you ever considered trying to find other work?
+		-> “It’s too much trouble, I don’t have time to look for other options”
+		-> “I don’t like the uncertainty of being between jobs, I’d rather just stay where I am”
+		-> “I’ve worked so hard to get to where I am, it feels like it would be a waste”
+		<i>Noxx nods, mulling over your words</i>
+		Noxx: That does make sense.
+		Noxx: …But it really doesn’t seem like this is the best path for you.
+		Noxx: The immediate aftermath may be intimidating, but years down the line you might look back on it as the best decision you’ve ever made.
+		<i> Noxx shrugs</i>
+		Noxx: -Or not, and that’s what makes it hard.
+		Noxx: But in my mind at least, knowing you at least tried is still better than wondering what could have been.
+		-> “I see what you mean”
+			<i> Noxx hums affirmatively</i>
+			Noxx: Of course it’s all easier said than done.
+			Noxx: But I don’t think I’d be able to live my life in complacency.
+			Noxx: Even if it means having to suffer to get to higher ground.
+		-> “I don’t think I’m in a position to feel that way.”
+			<i> Noxx winces</i>
+			Noxx: That might be true…
+			Noxx: Forgive me, I don’t mean to assume anything about your situation.
+		-> “That sounds kind of foolish.”
+			<i> Noxx barks out a laugh</i>
+			Noxx: Maybe, but the fool is the start of the journey after all, isn’t it?
+<i> As the two of you continue along the path, something unusual catches your eye</i>
+-> “What’s that?”
+	<i> Noxx follows your gaze to figure out what you’re talking about</i>
+-> “Do you know what kind of plant that is?”
+	Noxx: Plant?
+	<i> Noxx follows your gaze</i>
+-> Point over at it
+	<i> Noxx pauses and looks over to where you’re pointing </i>
+Noxx: Huh…
+<i> In the middle of a nearby clearing is an unusual amount of vines</i>
+<i> But even stranger is how the vines swirl around a cross shaped structure in the center</i>
+Noxx: That… doesn’t seem naturally occurring.
+<i> Something about the cross feels ominous, and judging by the way Noxx stiffens, they get a similar feeling </i>
+-> “Let’s get out of here…”
+	<i> Noxx hesitates</i>
+	Noxx: But...”
+	Noxx: We should at least check it out, to make sure someone doesn’t need help…
+	-> “No, we should leave it alone.”
+		<i> Noxx seems torn, glancing between you and the cross structure.</i>
+		<i> They sigh</i>
+		Noxx: You’re right, let’s go 
+		<i> The two of you continue on the path, enjoying an uneventful stroll</i>
+		<i> Before long...</i>
+		<<Jump SceneTwoEnd>>>
+	-> “Fine… but be careful”
+		Noxx: Of course.
+-> “Do you want to take a closer look?”
+	<i> Noxx nods</i>
+	Noxx: Yeah, a quick look.
+	Noxx: I just want to make sure everything is okay.
+<i> You and Noxx slowly approach the clearing</i>
+<i> The vines under your feet undulate, but they don’t make any other movement.</i>
+<i> As you get within a few feet of the cross, Noxx gasps<i>
+Noxx: <b>Gods above, are you alright?!</b>
+<i> From this distance it becomes clear that the cross-like structure is not just vines, but seems to have a gnome wrapped in the center</i>
+<i> His eyes are closed and he gives no response to Noxx’s question, but you can see his chest rise and fall with shallow breaths</i>
+<i> Face filled with panic, Noxx rushes over to the cross </i>
+<i> Once they are close enough, they reach out to grab at the vines entrapping the gnome</i>
+???: <b> STOP!</b>
+<i> Noxx flinches backwards at the sudden sound, glancing upwards to realize the gnome had opened his eyes, glaring at them angrily</i>
+<i> Noxx throws their hands up in front of them, taking a few steps back</i>
+Noxx: I apologise, I was just trying to help.
+<i> The gnome sneers</i>
+Gnome: By sticking your nose where it doesn’t belong?! Who said I needed your help?
+<i> The vines tighten around the gnome, leaving him wheezing for air</i>
+Gnome: You see?! You’re only making it worse!
+Noxx: Then how can we help?
+Gnome: Didn’t you hear me?! I don’t need your help!
+Gnome: You adventurers and your ego, galavanting around like you’re better than everyone else.
+Gnome: Well guess what! I’ve got this under control
+<i> Noxx looks like they’re at a loss, so you decide to step in </i>
+-> “Do you want to stay in there?”
+	<i> The gnome laughs mockingly</i>
+	Gnome: Of course not, you idiot!
+	Gnome: Who in their right mind would want to stay trapped like this.
+	Gnome: But I can leave whenever I want, so cease your damn meddling!
+	<i> You turn to Noxx</i>
+		-> “We should go”
+		<<jump Leaving>>
+-> “How’d you get in there in the first place?”
+	<i> The gnome sneers at your words</i>
+	Gnome: None of your damn business!
+	Noxx: Hey! Don’t talk to them like that.
+	-> “This is going nowhere, let’s go”
+		<<jump Leaving>>
+-> “We’ll be on our way then.”
+	<<jump Leaving>>
+===
+
+title: Leaving
+tags:
+---
+<i> Noxx whips their head around to balk at you</i>
+Noxx: We can’t just leave him here!
+Gnome: You better, if you know what’s good for you!
+-> “He doesn’t want to be helped”
+	Noxx: He can’t survive like this!
+	-> It’s not our call to make
+		<i>Noxx stares at you in disbelief, before lowering their head with a sigh</i>
+		Noxx: You’re right.
+		<i> Turning back to the Gnome, Noxx bids him farewell</i>
+		Noxx: Please take care of yourself.
+		<i> In return, the Gnome spits at their feet </i>
+		Gnome: Good riddance, hurry up and get out!
+		<i> The two of you head out of the clearing, returning back to the path you were on</i>
+		<<jump AfterGnomeNoAttempt>>
+-> “He’s an ass, why should we help him?”
+	<i> You’ve never seen Noxx so upset</i>
+	Noxx: What on earth do you mean, ‘why should we help him?’!
+	Noxx: Is your goodwill really so conditional?!
+	<i> They pause, staring at you in disbelief</i>
+	Noxx: I might have misjudged you.
+	-> “Noxx…”
+	-> “That’s not what I meant!”
+	<i>Ignoring you, Noxx mutters something under their breath, reaching for the vines.</i>
+	<i> Reacting to their touch, the vines loosen, allowing the gnome to slip down onto the ground</i>
+	Gnome: Piss off! I told you to leave me alone!
+	<i> Rather than taking the opportunity to run, the angry gnome turns red in the face, screaming at Noxx</i>
+	Gnome: You think you’re better than me or something? You bastard! You high and mighty adventurers are all the same.
+	<i> The vines shake off their momentary haze, reaching back towards the gnome, and Noxx! </i>
+	-> “Noxx!”
+		<i> Noxx turns at the sound of your voice</i>
+		<i> Seeing the vine, reaching for them, they jump into action</i>
+		<i> Hands outstretched in front of them, they speak in a garbled tongue</i>
+		<i> The vines turn limp once again, falling to the ground</i>
+		Noxx: RUN!
+		<i> Grabbing your hand, they bolt towards the path that you two had originally been on </i>
+		<<jump AfterGnomeAttempt>>
+	-> Reach for your dagger
+		<i> The vines wrap themselves around Noxx’s waist, eliciting a choked gasp as their midsection is constricted</i>
+		Gnome: You see! You just made it worse!
+		<i> Sounding oddly triumphant for someone who is in the process of being recaptured, the gnome makes no move to stop the vines wrapping themselves back around his limbs </i>
+		Gnome: Now you’re trapped here with me, you utter buffoon!
+		<i> As Noxx struggles against the vine, you jump forward and slash through the base of it.</i>
+		<i> As the vine falls limp around Noxx, you grab their hand</i>
+		-> “RUN!”
+		<i> You bolt off towards the path the two of you were originally on, dragging Noxx after you</i>
+		<<jump AfterGnomeAttempt>>
+===
+
+title: AfterGnomeNoAttempt
+tags:
+---
+<i> Once back on the path, the two of you fall into a heavy silence </i>
+<i> Noxx’s tail droops, their eyes distant</i>
+-> Leave them be
+	<i> You figure that prying would do more harm than good</i>
+	<i> You give them the space to sort through their thoughts at their own pace, figuring they would share them with you when you were ready</i>
+	<<Jump SceneTwoEnd>>>
+-> “You alright?”
+	Noxx: Yeah, I will be
+	<i> They pause for a moment</i>
+	Noxx: I just… Not being able to do anything just made me feel… 
+	<i> They leave the end of their sentence unspoken, shoulders sagging</i>
+	-> “There was no way we could have helped him”
+		<i> Noxx sighs, sagging next to you</i>
+		Noxx: Yeah… I know.
+		Noxx: But I still feel like I should have tried harder.
+	-> “It’s not your responsibility to help.”
+		Noxx: Imagine if every person felt that way about the people around them.
+		<i> They sigh</i>
+		Noxx: I know I’m not obligated, but it’s just nice to imagine a world where people would try regardless.
+	-> “You did your best.”
+		Noxx: True… it’s just disappointing to know your best wasn’t good enough.
+	<i> They pause, straightening up and squaring their shoulders</i>
+	Noxx: Don’t worry, I’ll be alright.
+	Noxx: I know you can’t always help everyone, but knowing that doesn’t seem to stop me from trying
+	<i> They laugh at their own illogical compulsions</i>
+	<<Jump SceneTwoEnd>>>
+===
+
+title: AfterGnomeAttempt
+tags:
+---
+<i> Once back on the path, a safe distance from the vines, you two stop to catch your breath</i>
+<i> As your breaths settle back into a normal pace, Noxx starts to speak</i>
+Noxx: I’m sorry.
+-> “What?”
+	Noxx: For putting us in that situation
+	Noxx: And for speaking to you so sharply
+	Noxx: I was frustrated, and I acted recklessly…
+	Noxx: Because of that we got put in danger…
+		-> I understand.
+			Noxx: I’ll be more careful in the future, I promise.
+			<<Jump SceneTwoEnd>>>
+		-> You need to be more careful in the future.
+			<i> They nod solemnly</i>
+			Noxx: Of course
+			<<Jump SceneTwoEnd>>>
+-> “I accept your apology”
+	Noxx: Thank you
+	Noxx: I’ll be more mindful in the future, I promise.
+	<<Jump SceneTwoEnd>>>
+-> “That was really dangerous” 
+	<i> Their ears droop</i>
+ 	Noxx: I know… I wasn’t thinking straight in the moment.
+	Noxx: It won’t happen again, I promise.
+	<<Jump SceneTwoEnd>>>
+===
+title: SceneTwoEnd
+tags:
+---
+<<notif MessengerIcon>>
+<<timepass Time 30>>
+Noxx: Work calling?
+-> “Yeah…”
+	<i> Noxx sighs</i>
+	Noxx: Well, I’ll see you again soon, my dear traveler.
+	Noxx: I’ll be waiting.
+	<<stop>>
+-> “How could you tell?”
+	Noxx: I just had this feeling…
+	Noxx: I’ll be waiting here for you, good luck with your work.
+	<<stop>>
+-> “I wish I didn’t have to go…”
+	<i>Noxx sighs</i>
+	Noxx: I know… it sucks, it really does.
+	Noxx: But one can’t just ignore all their responsibilities, as tempting as it is…
+	Noxx: Go take care of what you need to, I’ll be waiting here 
+	<<stop>>
+
+===

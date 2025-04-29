@@ -1,0 +1,222 @@
+﻿title: Bug9PM
+tags:
+---
+<<Them>>
+<<wait 1>>
+ Heya.
+<<wait 2>>
+You on tonight?
+<<wait 1>>
+<<Me>>
+-> Kinda… ‘:)
+    Kinda… ‘:)
+    <<wait 1>>
+    <<Them>>
+      Kinda? 
+      <<wait 2>>
+      What happened to freeing up time for the FM update?
+-> A little busy, but what’s up?
+     A little busy, but what’s up?
+     <<wait 1>>
+     <<Them>>
+      ? 
+     <<wait 3>>
+     Wait, I thought you were gonna be free tonight because of the FM update.
+     <<wait 2>>
+     What happened?
+->I can’t really talk right now
+    I can’t really talk right now
+    <<wait 1>>
+    <<Them>>
+    <<wait 1>>
+    Oh damn.
+    <<wait 2>>
+    I hope everything is okay!
+    <<wait 3>>
+    We can catch up again when you’re free
+    <<stop>>
+
+-> I ended up having more work to do.
+	<<Me>>
+	I ended up having more work to do.
+	<<Them>>
+	<<wait 1>>
+	Oh, damn.
+	<<wait 1>>
+	That really sucks :(
+	<<wait 2>>
+	It seems like this happens pretty often
+	-> Yeah,,, more so recently
+		<<Me>>
+		Yeah,,, more so recently
+		<<Them>>
+		<<wait 2>>
+		Oh? I assume they’re not doing super well?
+		-> Yeah.. not really
+			<<Me>>
+			Yeah.. not really
+	-> The company is just going through a rough patch right now.
+		<<Me>>
+		The company is just going through a rough patch right now.
+		<<Them>>
+		<<wait 2>>
+		Dang, that’s really unfortunate :/
+<<Them>>
+<<wait 3>>
+You complain about this company all the time anyways, maybe it’s time to look for a new job?
+-> Dude… the job market is in shambles
+	<<Me>>
+	Dude… the job market is in shambles
+	<<Them>>
+	<<wait 3>>
+	That’s true… but it kind of sounds like a sinking ship anyways.
+	<<wait 3>>
+	So you’ll likely have to find another job sooner or later.
+	<<wait 2>>
+	And even if that weren’t the case.
+	<<wait 2>>
+	It seems like you’re kind of miserable…
+-> That’s so much effort though!
+	<<Me>>
+	That’s so much effort though!
+	<<Them>>
+	<<wait 2>>
+	The best things in life often are ;3
+	<<wait 2>>
+	Plus it might be a lot in the moment,
+	<<wait 3>>
+	But it could be really worth it in the long run.
+-> Job hunting… scary ‘:)
+	<<Me>>
+	Job hunting… scary ‘:)
+	<<Them>>
+	<<wait 3>>
+	Yeah,,, one of the many horrors of the adult world orz
+	<<wait 3>>
+	But a necessary evil… for long term happiness?
+<<Them>>
+<<wait 4>>
+I guess part of the issue is that they keep you so busy you don’t even have time to consider better options.
+<<wait 3>>
+Don’t let them win!!! Aim for a better life, fight the system ùwú)b
+-> I’m not strong enough</3
+	<<Me>>
+	I’m not strong enough</3
+	<<Them>>
+	<<wait 1>>
+	Nooo!
+	<<wait 2>>
+	You’re much more capable than you think, trust.
+	<<wait 1>>
+	You just gotta trust in yourself.
+-> That’s easier said than done :/
+	<<Me>>
+	That’s easier said than done :/
+	<<Them>>
+	<<wait 1>>
+	Yeah, of course
+	<<wait 2>>
+	If it was easy, everyone would be doing it
+	<<wait 2>>
+	That’s how they keep us in check >:/
+<<Them>>
+<<wait 3>>
+Don’t let them relegate you to a miserable life.
+<<wait 2>>
+Anyways, enough of my lecturing ‘:)
+<<wait 2>>
+You ready for the meetup next month?
+-> So about that…
+	<<Me>>
+	So about that…
+-> Uhm…
+	<<Me>>
+	 Uhm…
+<<Them>>
+<<wait 1>>
+Did something happen? :0
+-> Work is probably going to get even busier
+	<<Me>>
+	Work is probably going to get even busier
+	<<Them>>
+	<<wait 1>>
+	Dude :( 
+	<<wait 1>>
+	…
+	<<wait 3>>
+	I’m not gonna restart the lecture, but ya know.
+	<<wait 2>>
+	Consider your own happiness and whatnot.
+	<<wait 3>>
+	And not to be selfish, but I was really excited to meet you in person :(
+	-> I just don’t think it’s possible for me right now
+		<<Me>>
+		I just don’t think it’s possible for me right now
+		<<Them>>
+		<<wait 1>>
+		Yeah okay, I get it.
+		<<wait 3>>
+		I gotta go take care of some stuff, but please take care of yourself.
+		<<wait 1>>
+		I’ll talk to you again soon!
+		-> See ya!
+			<<Me>>
+			See ya!
+			<<Stop>>
+	-> I’ll do my best to make that happen!
+		<<Me>>
+		I’ll do my best to make that happen!
+		<<Them>>
+		<<wait 1>>
+		Dope :)
+		<<wait 3>>
+		Not to get all sappy on you, but you really are one of my best friends
+		<<wait 3>>
+		I don’t really vibe with a lot of people, but you’re really chill
+		<<wait 3>>
+		And you were like, the only person I had supporting me in my transition.
+		<<wait 3>>
+		So don’t hesitate to reach out if there’s anything I can do to help.
+		-> Will do o7
+			<<Me>>
+			Will do o7
+			<<Them>>
+			<<wait 1>>
+			Hell yeah
+			<<wait 1>>
+			Gotta go now
+			<<wait 1>>
+			But we’ll talk soon?
+			-> Yeah, see ya!
+				<<Me>>
+				Yeah, see ya!
+				<<Stop>>
+		-> Aw, I love you too<3
+			<<Me>>
+			Aw, I love you too<3
+			<<Them>>
+			<<wait 1>>
+			Yeah yeah <3
+			<<wait 1>>
+			I’m gonna head off now,
+			<<wait 2>>
+			But take care and we’ll talk soon!
+			-> Will do, bye!! o7
+				<<Me>>
+				 Will do, bye!! o7
+				 <<Stop>>
+		->You’re one of my besties too c:
+			<<Me>>
+			You’re one of my besties too c:
+			<<Them>>
+			<<wait 1>>
+			:D
+			<<wait 2>>
+			Alright, I got some stuff to do
+			<<wait 1>>
+			But let’s talk again soon!
+			-> Yess, bye!
+				<<Me>>
+				Yess, bye!
+				<<Stop>>
+===
