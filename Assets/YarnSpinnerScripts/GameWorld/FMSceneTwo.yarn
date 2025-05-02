@@ -212,7 +212,7 @@ tags:
 	Noxx: Don’t worry, I’ll be alright.
 	Noxx: I know you can’t always help everyone, but knowing that doesn’t seem to stop me from trying
 	<i> They laugh at their own illogical compulsions</i>
-	<<Jump SceneTwoEnd>>>
+	<<Jump SceneTwoEnd>>
 ===
 
 title: AfterGnomeAttempt
@@ -228,20 +228,20 @@ Noxx: I’m sorry.
 	Noxx: Because of that we got put in danger…
 		-> I understand.
 			Noxx: I’ll be more careful in the future, I promise.
-			<<Jump SceneTwoEnd>>>
+			<<Jump SceneTwoEnd>>
 		-> You need to be more careful in the future.
 			<i> They nod solemnly</i>
 			Noxx: Of course
-			<<Jump SceneTwoEnd>>>
+			<<Jump SceneTwoEnd>>
 -> “I accept your apology”
 	Noxx: Thank you
 	Noxx: I’ll be more mindful in the future, I promise.
-	<<Jump SceneTwoEnd>>>
+	<<Jump SceneTwoEnd>>
 -> “That was really dangerous” 
 	<i> Their ears droop</i>
  	Noxx: I know… I wasn’t thinking straight in the moment.
 	Noxx: It won’t happen again, I promise.
-	<<Jump SceneTwoEnd>>>
+	<<Jump SceneTwoEnd>>
 ===
 title: SceneTwoEnd
 tags:

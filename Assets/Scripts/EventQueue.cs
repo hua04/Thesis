@@ -8,6 +8,7 @@ public class EventQueue : MonoBehaviour
     public List<EventTrigger> EventTriggers;
     public List<EventTrigger> AvailableEvents;
     public static EventQueue instance;
+    public List<GameObject> activeConvo;
     void Start()
     {
         AvailableEvents = new List<EventTrigger>();
@@ -19,6 +20,7 @@ public class EventQueue : MonoBehaviour
         {
             Destroy(gameObject);
         }
+       
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class EventQueue : MonoBehaviour
     {
 
     }
+
     public void CheckForEvent(int hour, int min) //Checking if event can be triggered at this time
     {
         for (int i = 0; i < EventTriggers.Count; i++)
@@ -49,8 +52,10 @@ public class EventQueue : MonoBehaviour
     {
         for (int i = 0; i < AvailableEvents.Count; i++)
         {
+
             if (AvailableEvents[i].eventLocation == current)
             {
+               
                 RunEvent(AvailableEvents[i]);
                 return;
             }

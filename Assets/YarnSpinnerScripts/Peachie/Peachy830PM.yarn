@@ -1,6 +1,8 @@
 ﻿title: Peachy830PM
 tags:
 ---
+<<wait 1>>
+<<active PeachieSelect false>>
 <<Them>>
 <<wait 1>>
 NEW UPDATE DAY YIPEEEEE!!!
@@ -16,14 +18,14 @@ Friend: How goes it on your end? :D
     <<Them>>
      Oh…
     <<wait 2>>
-    Something tells me this isn’t actually going to be that funny :/
+    :Something tells me this isn’t actually going to be that funny :\\
 -> Not well
-     Not well
+    Not well
+	<<wait 1>>
+	<<Them>>
+    ???
     <<wait 1>>
-    <<Them>>
-    Friend:???
-    <<wait 1>>
-    Friend: WAIT
+	WAIT
     <<wait 3>>
     DID THEY MAKE THE NOXX ROUTE FUCKED UP??? TAT
     <<Me>>
@@ -32,67 +34,103 @@ Friend: How goes it on your end? :D
 		-> It’s not about the game
             It’s not about the game.
     <<Them>>
-    Friend: Oh oops-
-	Friend: Sorry I am very FM brained right now.
-	Friend: But what happened? :(
-	<<Me>>
+	 <<wait 1>>
+    Oh oops-
+	 <<wait 2>>
+	Sorry I am very FM brained right now.
+	 <<wait 2>>
+	: But what happened? :((
+	
 
--> My boss just gave me more work :(
-	My boss just gave me more work :(
-	<<Them>>
-	.
-	Evil, evil man.
-	I am so sorry.
-	That is so sick and twisted. What are you planning to do then?
--> I’m behind on work, so I need to work on that tonight :(
-	I’m behind on work, so I need to work on that tonight :(
-	<<Them>>
-	? That doesn’t sound like you?
-	We’ve been talking about this, you’ve been working like mad to make sure you get the night off?
+-> :My boss just gave me more work :((
 	<<Me>>
+	:My boss just gave me more work :((
+	<<Them>>
+	 <<wait 1>>
+	.
+	 <<wait 1>>
+	Evil, evil man.
+	 <<wait 2>>
+	I am so sorry.
+	 <<wait 3>>
+	That is so sick and twisted. What are you planning to do then?
+-> :I’m behind on work, so I need to work on that tonight :((
+	<<Me>>
+	:I’m behind on work, so I need to work on that tonight :((
+	<<Them>>
+	 <<wait 3>>
+	? That doesn’t sound like you?
+	 <<wait 4>>
+	We’ve been talking about this, you’ve been working like mad to make sure you get the night off?
+	
 	-> Turns out there was some stuff I didn’t know about
+		<<Me>>
 		Turns out there was some stuff I didn’t know about
 		<<Them>>
+		<<wait 2>>
 		You didn’t know about it?
+		<<wait 2>>
 		That sounds… weird.
+		<<wait 3>>
 		I’m sorry, I wish I could help somehow.
+		<<wait 3>>
 		What are you planning to do then?
 	-> I got some stuff dumped on me last minute
+		<<Me>>
 		I got some stuff dumped on me last minute
 		<<Them>>
+		<<wait 1>>
 		Booo???
+		<<wait 2>>
 		That’s messed up.
+		<<wait 3>>
 		I’m sorry, I wish I could do something to help.
+		<<wait 3>>
 		What are you planning to do then?
 
--> Screw this shit, I’m just gonna play >:3c
+-> :Screw this shit, I’m just gonna play >:3c
 	<<Me>>
-	Screw this shit, I’m just gonna play >:3c
+	:Screw this shit, I’m just gonna play >:3c
 	<<Them>>
+	<<wait 1>>
 	HELL YAEH!
+	<<wait 3>>
 	Or wait.
+	<<wait 4>>
 	As much as I want to support your well deserved hedonism arc,
-	Be wary of the consequences :’)
+	<<wait 3>>
+	:Be wary of the consequences :’))
+	<<wait 3>>
 	But still, happy playing and good luck!
 -> Maybe I can try to find a way to do both?
 	<<Me>>
 	Maybe I can try to find a way to do both?
 	<<Them>>
+	<<wait 2>>
 	Omg multitasking legend???
+	<<wait 2>>
 	Just try not to burn yourself out.
+	<<wait 3>>
 	And remember to take care of yourself!
+	<<wait 2>>
 	Good luck, soldier o7
 -> I’ll just suck it up and work
 	<<Me>>
 	I’ll just suck it up and work
 	<<Them>>
-	:((( But you’ve really been looking forward to this.
+	<<wait 3>>
+	::((( But you’ve really been looking forward to this.
+	<<wait 2>>
 	I guess that is the most responsible answer.
+	<<wait 4>>
 	But maybe the quicker you get it done, the quicker you can get back to playing?
+	<<wait 2>>
 	Good luck, bestie!
 
 -> Thank you o7
 	<<Me>>
 	Thank you o7
+	<<wait 2>>
+	<<active PeachieSelect true>>
 
 ===

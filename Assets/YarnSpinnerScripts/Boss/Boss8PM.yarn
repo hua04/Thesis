@@ -1,6 +1,8 @@
 ﻿title: Boss8PM
 tags:
 ---
+<<wait 1>>
+<<active BossSelect false>>
 <<Them>>
 <<wait 1>>
 Have you finished the Q1 Report yet?
@@ -9,85 +11,76 @@ This is urgent.
 <<wait 1>>
 <<Me>>
 -> That wasn't assigned to me
-    That wasn't assigned to me
-    <<wait 2>>
-    <<Them>>
-    The person originally working on it quit a week ago
-    <<wait 1>>
-    Christ, did no one tell you?
+        That wasn't assigned to me
+        <<wait 2>>
+        <<Them>>
+        The person originally working on it quit a week ago
+        <<wait 1>>
+        Christ, did no one tell you?
 -> I thought someone else was handling that?
-    I thought someone else was handling that?
-    <<wait 2>>
-    <<Them>>
-    She quit last week, so I re-allocated her work
-    <<wait 1>>
-    Were you not informed?
+        I thought someone else was handling that?
+        <<wait 2>>
+        <<Them>>
+        She quit last week, so I re-allocated her work
+        <<wait 1>>
+        Were you not informed?
 
 -> No
-    <<Me>>
-    No
-    <<wait 2>>
-    <<Them>>
-    Ridiculous.
-    <<wait 3>>
-    I shouldn’t have to micromanage everything around here.
-    <<wait 2>>
-    Sending you the files now.
+        <<Me>>
+        No
+        <<wait 2>>
+        <<Them>>
+        Ridiculous.
+        <<wait 3>>
+        I shouldn’t have to micromanage everything around here.
+        <<wait 2>>
+        Sending you the files now.
 ->  I don’t think so
-    <<Me>>
-     I don’t think so
-    <<wait 2>>
-    <<Them>>
-     You 'don't think'?
-    <<wait 1>>
-    Yeah, apparently not
-    <<wait 3>>
-    I can’t believe I’m surrounded by so much incompetence.
-    <<wait 2>>
-    Sending you the files now.
+        <<Me>>
+         I don’t think so
+        <<wait 2>>
+        <<Them>>
+         You 'don't think'?
+        <<wait 1>>
+        Yeah, apparently not
+        <<wait 3>>
+        I can’t believe I’m surrounded by so much incompetence.
+        <<wait 2>>
+        Sending you the files now.
 
--> I’m actually off right now
-    <<Me>>
-    I’m actually off right now
-    <<Them>>
-    <<wait 2>>
-    Doesn’t matter.
-    <<wait 3>>
-	This is work you were supposed to do, and it is urgent.
-    <<wait 2>>
-	It needs to be done now.
-    <<wait 1>>
-	Do you understand?
 -> I’ve already clocked out for the day
-	<<Me>>
-    I’ve already clocked out for the day
-    <<Them>>
-    <<wait 2>>
-    Doesn’t matter.
-    <<wait 3>>
-	This is work you were supposed to do, and it is urgent.
-    <<wait 2>>
-	It needs to be done now.
-    <<wait 1>>
-	Do you understand?
+   <<Me>>
+   I’ve already clocked out for the day
+-> I’m actually off right now
+   <<Me>>
+   I’m actually off right now
+ <<Them>>
+ <<wait 2>>
+ Doesn’t matter.
+<<wait 3>>
+This is work you were supposed to do, and it is urgent.
+<<wait 2>>
+It needs to be done now.
+<<wait 1>>
+Do you understand?
+-> Yes
+        <<Me>>
+        Yes
+        <<Them>>
+        <<wait 3>>
+        Boss: Good, the file is in your work portal desktop now.
+        <<wait 4>>
+	    Boss: Let me know once you’re finished, more work needs to be done.
+        <<wait 4>>
+	    Boss: The end of the quarter is near, this isn’t the time to be fucking around.
+        <<wait 2>>
+	    Boss: Just buckle down and get it done.
+        <<wait 1>>
+	    Boss: Got it?
 
 -> Yes
-    <<Me>>
-    Yes
-    <<Them>>
-    <<wait 3>>
-    Boss: Good, the file is in your work portal desktop now.
-    <<wait 4>>
-	Boss: Let me know once you’re finished, more work needs to be done.
-    <<wait 4>>
-	Boss: The end of the quarter is near, this isn’t the time to be selfish.
-    <<wait 2>>
-	Boss: Just buckle down and get it done.
-    <<wait 1>>
-	Boss: Got it?
-
--> Yes
-    <<Me>>
-    Yes
-
+        <<Me>>
+        Yes
+	    <<wait 2>>
+	    <<active BossSelect true>>
 ===

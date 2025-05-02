@@ -1,4 +1,5 @@
 using UnityEngine;
+using Yarn.Unity;
 
 public class ConvoActive : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class ConvoActive : MonoBehaviour
     public GameObject thisConvo;
     public GameObject[] selectionHighlight;
     public GameObject thisSelect;
-   // public EventQueue eventQueue;
+    public GameObject thisInactive;
+    public bool convoOn=false;
    // public Location thisLocation;
     public void Awake()
     {
@@ -45,9 +47,27 @@ public class ConvoActive : MonoBehaviour
         }
         thisSelect.SetActive(true);
 
+        if (!convoOn)
+        {
+            thisInactive.SetActive(true);
+        }
+        else
+        {
+            thisInactive.SetActive(false);
+        }
+       
 
-       // eventQueue.CheckForLocation(thisLocation);
 
+        // eventQueue.CheckForLocation(thisLocation);
+
+
+    }
+
+    [YarnCommand("active")]
+    public void activeScreen(bool off)
+    {
+        thisInactive.SetActive(off);
+        convoOn = !off;
 
     }
 
