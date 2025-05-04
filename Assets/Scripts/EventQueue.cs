@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Yarn;
@@ -9,6 +10,7 @@ public class EventQueue : MonoBehaviour
     public List<EventTrigger> AvailableEvents;
     public static EventQueue instance;
     public List<GameObject> activeConvo;
+    public List<GameObject> indicators;
     void Start()
     {
         AvailableEvents = new List<EventTrigger>();
@@ -37,6 +39,29 @@ public class EventQueue : MonoBehaviour
             if (currentEvent.min == min && currentEvent.hour == hour)
             {
                 AvailableEvents.Add(currentEvent);
+                
+            }
+            
+        }
+      
+    }
+
+    public void ConvoIndicators(){
+
+        foreach (Location loc in (Location[])Enum.GetValues(typeof(Location)))
+        {
+            if (loc != Location.gameWindow && loc != Location.none)
+            {
+                indicators[(int)loc - 1].SetActive(false);
+
+            }
+        }
+        foreach (EventTrigger convo in AvailableEvents)
+        {
+            if (convo.eventLocation != Location.gameWindow && convo.eventLocation != Location.none)
+            {
+                convo.highlight.SetActive(true);
+                
             }
         }
     }
@@ -65,8 +90,9 @@ public class EventQueue : MonoBehaviour
     public void RunEvent(EventTrigger current)
     {
         Debug.Log(current.nodeName);
+        ConvoIndicators();
         current.dialogueRunner.StartDialogue(current.nodeName);
-        AvailableEvents.Remove(current);
+       // AvailableEvents.Remove(current);
     }
 }
 
@@ -79,7 +105,8 @@ public class EventTrigger
     public int min;
     public Location eventLocation;
     public TextAsset script;
-    public DialogueRunner dialogueRunner; 
+    public DialogueRunner dialogueRunner;
+    public GameObject highlight;
 
 }
 

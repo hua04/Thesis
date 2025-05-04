@@ -1,0 +1,81 @@
+﻿title: Boss930PM
+tags:
+---
+<<wait 1>>
+<<active BossSelect false>>
+<<Them>>
+<<wait 1>>
+I forwarded the report you drafted to our analyst team.
+<<wait 2>>
+The information was inaccurate.
+<<wait 2>>
+-> I was using the data given to me
+	<<Me>>
+	I was using the data given to me
+	<<Them>>
+	<<wait 4>>
+	While that might be the case, you should have been able to tell something was off
+	<<wait 4>>
+	It took me only a couple of minutes to realize that some of this information doesn’t track.
+	<<wait 2>>
+	Your carelessness could have cost us heavily
+-> Oh shoot, the data must have gotten mixed up
+	<<Me>>
+	Oh shoot, the data must have gotten mixed up
+	<<Them>>
+	<<wait 3>>
+	Yes, some of this looks like it could have been from last year’s data
+	<<wait 3>>
+	Amazing that you failed to notice that the information didn’t track
+	<<wait 1>>
+	I don’t appreciate this lax approach you have to the work we do here.
+<<Them>>
+<<wait 4>>
+You’re lucky that someone else caught it before the information was sent out.
+<<wait 2>>
+And that we’re on a tight deadline.
+<<wait 3>>
+Otherwise we’d be having a very different conversation.
+<<wait 3>>
+So I’ll overlook your negligence this time.
+<<wait 1>>
+-> Thank you
+	<<Me>>
+	Thank you
+	<<Them>>
+	<<wait 1>>
+	I don’t need empty gratitude.
+	<<wait 1>>
+	Just do better.
+	<<wait 1>>
+	<<active BossSelect true>>
+	<<stop>>
+-> I’m not the only responsible party.
+	<<Me>>
+	I’m not the only responsible party.
+	<<wait 3>>
+	The files were given to me in such a way that the information was easy to misinterpret.
+	<<Them>>
+	<<wait 2>>
+	To be quite frank, I could not care less
+	<<wait 4>>
+	You failed to catch the error, and turned in work that would have reflected poorly on us.
+	<<wait 4>>
+	This is your mess, so the responsibility falls on you to fix it as soon as possible
+	<<wait 4>>
+	Keep in mind our deadlines, so this does not mean you get to slack on the other files.
+	<<wait 5>>
+	In fact, I would urge you to be extra meticulous, to ensure that we don’t have a repeat of this incident.
+	<<wait 1>>
+	Do I make myself clear?
+	<<wait 1>>
+	->Yes
+		<<Me>>
+		Yes
+		<<Them>>
+		<<wait 1>>
+		Get to it, then.
+		<<wait 1>>
+		<<active BossSelect true>>
+
+===

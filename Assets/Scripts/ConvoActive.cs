@@ -20,7 +20,7 @@ public class ConvoActive : MonoBehaviour
     }
     public void Start()
     {
-        if (thisConvo.transform.name != "BossConvo")
+        /*if (thisConvo.transform.name != "BossConvo")
         {
             thisConvo.transform.Find("Dialogue Canvas").gameObject.SetActive(false);
         }
@@ -29,7 +29,9 @@ public class ConvoActive : MonoBehaviour
         if (thisSelect.transform.parent.name != "BossSelect")
         {
             thisSelect.SetActive(false);
-        }
+        }*/
+        thisConvo.transform.Find("Dialogue Canvas").gameObject.SetActive(false);
+        thisSelect.SetActive(false);
     }
     public void ConvoSelected()
     {

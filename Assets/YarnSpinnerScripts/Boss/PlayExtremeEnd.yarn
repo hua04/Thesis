@@ -1,5 +1,30 @@
 ﻿title: PlayExtremeEnd
 tags:
 ---
+<<active BossSelect false>>
+<<Them>>
+<<wait 1>>
+Where are the files?
+<<wait 1>>
+-> Still working on them
+<<Me>>
+Still working on them
+<<Them>>
+<<wait 2>>
+Are you kidding me?!
+<<wait 3>>
+You’ve had more than enough time to finish what I sent.
+<<wait 4>>
+Do you really think we’re in any position to be carrying dead weight right now?
+<<wait 1>>
+->...
+<<wait 5>>
+Hello? 
+<<wait 1>>
+Ridiculous-
+<<wait 4>>
+Based on your performance tonight, I don’t think you're an employee worth keeping.
+<<wait 2>>
+I wish you the best in your future endeavors.
 
 ===

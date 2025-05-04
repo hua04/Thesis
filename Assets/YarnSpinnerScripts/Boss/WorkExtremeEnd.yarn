@@ -1,5 +1,43 @@
 ﻿title: WorkExtremeEnd
 tags:
 ---
+<<active BossSelect false>>
+<<wait 1>>
+-> Look, I need to clock off for the night.
+	<<Me>>
+	Look, I need to clock off for the night.
+	<<Them>>
+	<<wait 3>>
+	What? There’s still work that needs to be done
+<<wait 1>>
+-> I can’t take it anymore
+	<<Me>>
+	<<wait 2>>
+	Family emergency came up
+	<<Them>>
+	<<wait 4>>
+	That’s unfortunate, but we really can’t afford for you to be taking time off right now.
+	<<wait 3>>
+	It will just have to wait, do you understand?
+	<<wait 1>>
+
+-> ...
+	<<Them>>
+	<<wait 5>>
+	Hello? Did you get my last message.
+	<<wait 3>>
+	I need to know that you understood
+	<<wait 1>>
+	Otherwise we’ll simply have to let you go.
+	<<wait 1>>
+
+-> ...
+	<<Them>>
+	<<wait 5>>
+	You’ve made your choice then.
+	<<wait 4>>
+	I wish you the best in your future endeavors.
+
+
 
 ===

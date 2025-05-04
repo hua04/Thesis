@@ -1,15 +1,18 @@
 ﻿title: Boss830PM
 tags:
 ---
+<<active BossSelect false>>
+<<wait 1>>
 <<Them>>
-<<wait 1>>
 I recieved the report
-<<wait 1>>
+<<wait 3>>
 I am sending you more files to complete ASAP
 <<wait 1>>
 <<Me>>
 -> Got it
     Got it
+    <<wait 1>>
+    <<active BossSelect true>>
     
 
 

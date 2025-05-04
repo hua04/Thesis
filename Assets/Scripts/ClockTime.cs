@@ -24,7 +24,6 @@ public class ClockTime : MonoBehaviour
         temp = GameObject.FindGameObjectWithTag("AMPM");
         timeOfDayTMP = temp.GetComponent<TextMeshProUGUI>();
         UpdateTime(0);
-        EventQueue.instance.CheckForEvent(hour, min);
     }
 
     [YarnCommand("timepass")]

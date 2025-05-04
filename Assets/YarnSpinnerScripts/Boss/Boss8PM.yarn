@@ -1,7 +1,6 @@
 ﻿title: Boss8PM
 tags:
 ---
-<<wait 1>>
 <<active BossSelect false>>
 <<Them>>
 <<wait 1>>
@@ -24,6 +23,7 @@ This is urgent.
         She quit last week, so I re-allocated her work
         <<wait 1>>
         Were you not informed?
+<<wait 1>>
 
 -> No
         <<Me>>
@@ -48,6 +48,7 @@ This is urgent.
         <<wait 2>>
         Sending you the files now.
 
+<<wait 1>>
 -> I’ve already clocked out for the day
    <<Me>>
    I’ve already clocked out for the day
@@ -63,24 +64,26 @@ This is work you were supposed to do, and it is urgent.
 It needs to be done now.
 <<wait 1>>
 Do you understand?
+<<wait 1>>
 -> Yes
         <<Me>>
         Yes
         <<Them>>
-        <<wait 3>>
+        <<wait 2>>
         Boss: Good, the file is in your work portal desktop now.
-        <<wait 4>>
+        <<wait 3>>
 	    Boss: Let me know once you’re finished, more work needs to be done.
-        <<wait 4>>
+        <<wait 3>>
 	    Boss: The end of the quarter is near, this isn’t the time to be fucking around.
         <<wait 2>>
 	    Boss: Just buckle down and get it done.
         <<wait 1>>
 	    Boss: Got it?
 
+<<wait 1>>
 -> Yes
         <<Me>>
         Yes
-	    <<wait 2>>
+	    <<wait 1>>
 	    <<active BossSelect true>>
 ===

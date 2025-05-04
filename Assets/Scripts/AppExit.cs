@@ -5,7 +5,7 @@ using UnityEngine;
 public class AppExit : MonoBehaviour
 {
     public GameObject FileToOpen;
-    public GameObject popup;
+    //public GameObject popup;
     public void CloseApp()
     {
        
@@ -25,10 +25,10 @@ public class AppExit : MonoBehaviour
 
         //close file
         FileToOpen.SetActive(false);
-        if (popup!=null)
+        /*if (popup!=null)
         {
             popup.SetActive(false);
-        }
+        }*/
 
       
 

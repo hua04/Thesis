@@ -15,6 +15,8 @@ public class AppDrag : MonoBehaviour
     Vector2 mousePos;
     float mousePosY, mousePosX;
     public GameObject FileToOpen;
+    public GameObject areaToMove;
+    public int offset;
 
 
     public void DragHandler(BaseEventData data)
@@ -52,6 +54,6 @@ public class AppDrag : MonoBehaviour
         Vector3 newPos = new Vector3(position.x - offsetX, position.y - offsetY, 0); // Apply offset to the new position
 
         transform.position = canvas.transform.TransformPoint(newPos); // Convert the local position back to world position*/
-        transform.position = canvas.transform.TransformPoint(position.x , position.y, 0);
+        areaToMove.transform.position = canvas.transform.TransformPoint(position.x , position.y-offset, 0);
     }
 }

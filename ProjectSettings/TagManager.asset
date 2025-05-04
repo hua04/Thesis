@@ -12,6 +12,11 @@ TagManager:
   - Hour
   - Min
   - AMPM
+  - bossChat
+  - friendChat
+  - coworkerOneChat
+  - onlineFriendChat
+  - coworkerTwoChat
   layers:
   - Default
   - TransparentFX
