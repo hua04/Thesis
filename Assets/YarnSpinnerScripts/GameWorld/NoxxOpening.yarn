@@ -1,6 +1,7 @@
 ﻿title: NoxxOpening
 tags:
 ---
+<<stopbgm GameIcon>>
 <<wait 1>>
 <<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
 Noxx: Ah!
