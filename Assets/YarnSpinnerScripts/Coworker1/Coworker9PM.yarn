@@ -1,10 +1,13 @@
 ﻿title: Coworker9PM
 tags:
 ---
+<<active Coworker1Select false>>
 <<Them>>
+<<wait 1>>
 Hiiii, so I need some help with some work.
-<<wait 3>>
+<<wait 2>>
 I have a couple of files that I’m behind on.
+<<wait 1>>
 -> Sure, send it over
 	<<Me>>
 	Sure, send it over
@@ -15,7 +18,10 @@ I have a couple of files that I’m behind on.
 	I already let the boss know you were handling it, so just send them to him once you’re done.
 	<<wait 1>>
 	Files sent!
-	<<Stop>>
+	<<wait 2>>
+	<<remove EventQueue Coworker9PM>>
+	<<active Coworker1Select true>>
+	<<stop>>
 -> Uhh, I kinda have my hands full already.
 	<<Me>>
 	Uhh, I kinda have my hands full already.
@@ -26,6 +32,7 @@ I have a couple of files that I’m behind on.
 	I helped you with that file last quarter, didn’t I?
 	<<wait 2>>
 	So I’m counting on you to return the favor.
+	<<wait 1>>
 	-> That was completely different
 		<<Me>>
 		That was completely different
@@ -40,7 +47,10 @@ I have a couple of files that I’m behind on.
 		So I’ll just send them over, ok?
 		<<wait 1>>
 		Files sent!
-		<<Stop>>
+		<<wait 2>>
+		<<remove EventQueue Coworker9PM>>
+		<<active Coworker1Select true>>
+		<<stop>>
 	-> Ok yeah that’s fair
 		<<Me>>
 		Ok yeah that’s fair
@@ -51,5 +61,8 @@ I have a couple of files that I’m behind on.
 		I already let the boss know you were handling it, so just send them to him once you’re done.
 		<<wait 1>>
 		Files sent!
-		<<Stop>>
+		<<wait 2>>
+		<<remove EventQueue Coworker9PM>>
+		<<active Coworker1Select true>>
+		<<stop>>
 ===

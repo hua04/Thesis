@@ -1,7 +1,6 @@
 ﻿title: Peachy830PM
 tags:
 ---
-<<wait 1>>
 <<active PeachieSelect false>>
 <<Them>>
 <<wait 1>>
@@ -28,6 +27,7 @@ Friend: How goes it on your end? :D
 	WAIT
     <<wait 3>>
     DID THEY MAKE THE NOXX ROUTE FUCKED UP??? TAT
+	<<wait 1>>
     <<Me>>
         -> Nonono, it’s not that
             Nonono, it’s not that
@@ -40,7 +40,7 @@ Friend: How goes it on your end? :D
 	Sorry I am very FM brained right now.
 	 <<wait 2>>
 	: But what happened? :((
-	
+<<wait 1>>
 
 -> :My boss just gave me more work :((
 	<<Me>>
@@ -62,7 +62,7 @@ Friend: How goes it on your end? :D
 	? That doesn’t sound like you?
 	 <<wait 4>>
 	We’ve been talking about this, you’ve been working like mad to make sure you get the night off?
-	
+	<<wait 1>>
 	-> Turns out there was some stuff I didn’t know about
 		<<Me>>
 		Turns out there was some stuff I didn’t know about
@@ -87,7 +87,7 @@ Friend: How goes it on your end? :D
 		I’m sorry, I wish I could do something to help.
 		<<wait 3>>
 		What are you planning to do then?
-
+<<wait 1>>
 -> :Screw this shit, I’m just gonna play >:3c
 	<<Me>>
 	:Screw this shit, I’m just gonna play >:3c
@@ -123,14 +123,15 @@ Friend: How goes it on your end? :D
 	<<wait 2>>
 	I guess that is the most responsible answer.
 	<<wait 4>>
-	But maybe the quicker you get it done, the quicker you can get back to playing?
+	Maybe the quicker you get it done, the quicker you can get back to playing?
 	<<wait 2>>
 	Good luck, bestie!
-
+<<wait 1>>
 -> Thank you o7
 	<<Me>>
 	Thank you o7
 	<<wait 2>>
+	<<remove EventQueue Peachy830PM>>
 	<<active PeachieSelect true>>
 
 ===

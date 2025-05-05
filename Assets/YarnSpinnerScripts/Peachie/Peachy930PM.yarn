@@ -1,5 +1,307 @@
 ﻿title: Peachy930PM
 tags:
 ---
+<<active PeachieSelect false>>
+<<Them>>
+<<wait 1>>
+OH! I know you’re busy,,, but do you happen to have a sec?
+<<wait 1>>
+There’s something I want to blab about heheh
+<<wait 1>>
+	-> :Not right now :\\
+		<<Me>>
+		:Not right now :\\
+		<<Them>>
+		<<wait 3>>
+		Aw, that’s okay! I know you mentioned all the work stuff earlier.
+		<<wait 3>>
+		Maybe later then! Just let me know when you’re free
+		<<wait 1>>
+		Good luck!
+		<<wait 2>>
+		<<remove EventQueue Peachy930PM>>
+		<<active PeachieSelect true>>
+		<<stop>>
+	-> Yeah, I’m taking a break rn. What’s up?
+		<<Me>>
+		Yeah, I’m taking a break rn. What’s up?
+		<<Them>>
+		<<wait 1>>
+		:Oh YIPPEE! :D 
+		<<wait 2>>
+		:Caught you at the perfect time >:D
+		<<wait 1>>
+		I forgot to mention earlier 
+		<<wait 3>>
+		But to celebrate the update the official FM account posted some new Ufgra art!!!
+		<<wait 1>>
+			-> YESSS!!!
+				<<Me>>
+				YESSS!!!
+				<<Them>>
+				<<wait 1>>
+				YAAAA!!!!
+				<<wait 3>>
+				My badass wife I’m so glad she’s finally getting the attention she deserves<3
+			-> I saw earlier! So pretty!!!
+				<<Me>>
+				I saw earlier! So pretty!!!
+				<<Them>>
+				<<wait 1>>
+				IKR!!!
+				<<wait 2>>
+				My wife… gorjus….
+				<<wait 3>>
+				So pretty I can't even spell straight LMAO
+		<<Them>>
+		<<wait 3>>
+		I have such a type it’s not even funny anymore skdja
+		<<wait 1>>
+			-> Big lady make brain go brrr!!!
+				<<Me>>
+				Big lady make brain go brrr!!!
+				<<Them>>
+				<<wait 1>>
+				BRRRR INDEED!
+				<<wait 3>>
+				Even just thinking about her makes me sooo happy!!!
+				<<wait 2>>
+				She’s just so powerful and aspirational
+				<<wait 4>>
+				It’s this combo of wanting to be with her, but also be like her, you know?
+				<<wait 1>>
+				-> Yeah, I’m the same way with characters!
+					<<Me>>
+					Yeah, I’m the same way with characters!
+					<<Them>>
+					<<wait 1>>
+					Shaking your hand rn!!!
+					<<wait 3>>
+					:Noxx is def someone to admire, if that’s who you mean c:
+					<<wait 1>>
+					Very sweet for sure.
+				-> :I don’t quite get it, but I’m happy for you c:
+					<<Me>>
+					:I don’t quite get it, but I’m happy for you c:
+					<<Them>>
+					<<wait 3>>
+					dskjadh yeah, it’s not a universal perspective, that’s for sure
+					<<wait 3>>
+					But I always appreciate you listening to my obsessive ramblings!
+					<<wait 5>>
+					:I love knowing that there’s this pretty lady who lives in my head and in my computer who loves and cares for me :D
+					<<wait 3>>
+					... That sounded insane didn’t it
+					<<wait 1>>
+					-> Nah, makes total sense to me
+						<<Me>>
+						Nah, makes total sense to me
+						<<Them>>
+						<<wait 1>>
+						:Hehe >:3c
+					-> A little…
+						<<Me>>
+						A little…
+						<<Them>>
+						<<wait 1>>
+						ahaha oops
+				<<wait 2>>
+				Anyways, I just wanted to blab about my wifeee 
+				<<wait 1>>
+				I’ll let you get back to it now!
+				<<wait 1>>
+					-> Bye!
+						<<Me>>
+						Bye!
+						<<Them>>
+						<<wait 1>>
+						Byeeee!
+						<<wait 2>>
+						<<remove EventQueue Peachy930PM>>
+						<<active PeachieSelect true>>
+						<<stop>>
+			-> Like that lady at work…?
+				<<Me>>
+				Like that lady at work…?
+				<<Them>>
+				<<wait 3>>
+				Oh…
+				<<wait 3>>
+				I forgot to tell you.
+				<<wait 1>>
+				-> What happened?
+					<<Me>>
+					What happened?
+					<<Them>>
+					<<wait 3>>
+					I mean not much?
+					<<wait 3>>
+					I can’t even tell if it’s all in my head or not
+					<<wait 3>>
+					I feel like an idiot for even still thinking about it
+				-> Is everything okay?
+					<<Me>>
+					Is everything okay?
+					<<Them>>
+					<<wait 3>>
+					I… don’t know?
+					<<wait 2>>
+					and I think that’s the worst part
+					<<wait 3>>
+					Like what if I’m just making it up to be this huge thing in my head and it’s actually nothing?
+				<<Them>>
+				<<wait 2>>
+				God,,, I feel insane
+				<<wait 1>>
+					-> Do you want to talk about it?
+						<<Me>>
+						Do you want to talk about it?
+						<<Them>>
+						<<wait 2>>
+						Yeah! I def wanna get this off my chest
+						<<wait 2>>
+						Just trying to figure out where to start
+					-> We don’t have to talk about this if you don’t want to.
+						<<Me>>
+						We don’t have to talk about this if you don’t want to.
+						<<Them>>
+						<<wait 1>>
+						Nono, I do!
+						<<wait 2>>
+						I’m just trying to figure out how to explain.
+				<<Them>>
+				<<wait 4>>
+				Ok so basically,
+				<<wait 3>>
+				I thought we were getting closer
+				<<wait 3>>
+				Hell, I thought she might even be into me
+				<<wait 1>>
+				-> You never told me that
+					<<Me>>
+					You never told me that
+					<<Them>>
+					<<wait 2>>
+					:I was trying not to get my hopes up :’)
+					<<wait 2>>
+					Which was easier said than done
+				-> Right, I remember you saying something about that
+					<<Me>>
+					Right, I remember you saying something about that
+					<<Them>>
+					<<wait 1>>
+					Yeah…
+					<<wait 3>>
+					God, I feel delusional for even thinking that was ever the case.
+				<<Them>>
+				<<wait 2>>
+				So we were talking about random stuff,
+				<<wait 2>>
+				and it somehow slips in that I’m into girls…
+				<<wait 1>>
+				And
+				<<wait 2>>
+				Ugh, it’s so embarrassing thinking about it in hindsight.
+				<<wait 3>>
+				But she asked me about it and I somehow ended up telling her about FM and Ufgra as well
+				<<wait 3>>
+				And when I showed her, she just kinda got this weird smirk on her face
+				<<wait 3>>
+				I don’t really remember the rest of the conversation because I was panicking so much
+				<<wait 1>>
+				But we haven’t really talked since
+				<<wait 1>>
+				And when we do it feels weird…
+				<<wait 1>>
+				-> Wow…
+					<<Me>>
+					Wow…
+					<<Them>>
+					<<wait 2>>
+					Yeah,,, I feel the same way
+					<<wait 2>>
+					Like what was I even thinking?
+					<<wait 2>>
+					I got wayy too comfortable too fast
+					<<wait 3>>
+					and now she totally thinks I’m some kind of freak
+					<<wait 3>>
+					:and I can’t even tell if it’s the game thing or liking girls thing or both :((( 
+				-> :I’m so sorry that happened :( 
+					<<Me>>
+					:I’m so sorry that happened :(
+					<<Them>>
+					<<wait 2>>
+					You don’t need to say sorry qwq
+					<<wait 2>>
+					I just feel like such an idiot
+					<<wait 3>>
+					and I don’t fully understand which part of it was weird to her
+					<<wait 1>>
+					Or all of it?
+					<<wait 2>>
+					:I don’t know :((( 
+				<<Them>>
+				<<wait 3>>
+				I thought she was chill, and it would be okay to share,
+				<<wait 2>>
+				Cus idk, maybe she’d get it?
+				<<wait 2>>
+				But now I just feel like such a freak
+				<<wait 1>>
+				-> She’s such a jerk
+					<<Me>>
+					She’s such a jerk
+					<<Them>>
+					<<wait 4>>
+					Yeah,,, and I feel humiliated for not having realized that before I opened up to her
+				-> You’re not!
+					<<Me>>
+					You’re not!
+					<<Them>>
+					<<wait 1>>
+					I am though
+					<<wait 3>>
+					And normally I don’t care, I’ve made my peace with being a weird gal.
+					<<wait 3>>
+					But now I just feel like a gross little slug when she looks at me
+				<<Them>>
+				<<wait 1>>
+				Anyways!
+				<<wait 3>>
+				Enough of that, trying to slam that chapter closed now
+				<<wait 3>>
+				No more irl women, staying loyal to my wife Ufgra now<3
+				<<wait 1>>
+				-> Peachie…
+					<<Me>>
+					Peachie…
+					<<Them>>
+					<<wait 1>>
+					I know it’s silly
+					<<wait 2>>
+					but it makes me feel better, and less alone
+				-> You’re so real for that
+					<<Me>>
+					You’re so real for that
+					<<Them>>
+					<<wait 1>>
+					You get meee<333
+				<<Them>>
+				<<wait 2>>
+				I’ll let you get back to your work
+				<<wait 1>>
+				Ty for letting me ramble<3
+				<<wait 1>>
+				->Bye!
+					<<Me>>
+					Bye!
+					<<wait 1>>
+					<<Them>>
+					Bye!!
+					<<wait 2>>
+					<<remove EventQueue Peachy930PM>>
+					<<active PeachieSelect true>>
+					<<stop>>
 
 ===

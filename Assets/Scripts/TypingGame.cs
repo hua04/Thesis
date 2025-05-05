@@ -134,17 +134,17 @@ public class TypingGame : MonoBehaviour
 
     public void SubmitPress(int num)
     {
-        if (IsComplete())
-        {
-        Destroy(desktopApp);
-        int lastPosition = AppClickOpen.openFiles.IndexOf(gameApp);
-        AppClickOpen.openFiles.RemoveAt(lastPosition);
-        Destroy(gameApp);
+        //if (IsComplete())
+        //{
+        //Destroy(desktopApp);
+       // int lastPosition = AppClickOpen.openFiles.IndexOf(gameApp);
+        //AppClickOpen.openFiles.RemoveAt(lastPosition);
+        //Destroy(gameApp);
 
         timeScript.UpdateTime(num);
-            notifications.NotifOn();
+            //notifications.NotifOn();
 
 
-         }
+        // }
     }
 }

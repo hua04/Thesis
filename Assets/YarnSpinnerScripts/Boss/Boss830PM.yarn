@@ -12,6 +12,7 @@ I am sending you more files to complete ASAP
 -> Got it
     Got it
     <<wait 1>>
+    <<remove EventQueue Boss830PM>>
     <<active BossSelect true>>
     
 

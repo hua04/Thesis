@@ -76,6 +76,7 @@ So I’ll overlook your negligence this time.
 		<<wait 1>>
 		Get to it, then.
 		<<wait 1>>
+		<<remove EventQueue Boss930PM>>
 		<<active BossSelect true>>
 
 ===

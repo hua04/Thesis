@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Yarn;
 using Yarn.Unity;
 
 public class EventQueue : MonoBehaviour
@@ -11,8 +10,12 @@ public class EventQueue : MonoBehaviour
     public static EventQueue instance;
     public List<GameObject> activeConvo;
     public List<GameObject> indicators;
+    public bool worked;
+    public bool played;
     void Start()
     {
+        worked = false;
+        played = false;
         AvailableEvents = new List<EventTrigger>();
         if (instance == null)
         {
@@ -22,7 +25,7 @@ public class EventQueue : MonoBehaviour
         {
             Destroy(gameObject);
         }
-       
+
     }
 
     // Update is called once per frame
@@ -33,20 +36,62 @@ public class EventQueue : MonoBehaviour
 
     public void CheckForEvent(int hour, int min) //Checking if event can be triggered at this time
     {
+        AvailableEvents.Clear();
         for (int i = 0; i < EventTriggers.Count; i++)
         {
             var currentEvent = EventTriggers[i];
             if (currentEvent.min == min && currentEvent.hour == hour)
             {
                 AvailableEvents.Add(currentEvent);
-                
+
             }
-            
+
         }
-      
+        if (hour == 9 && min == 30)
+        {
+            List<EventTrigger> endingEvents = new List<EventTrigger>();
+            if (worked && played)
+            {
+                foreach (EventTrigger possibleEvent in AvailableEvents)
+                {
+                    if (possibleEvent.work && possibleEvent.play)
+                    {
+                        endingEvents.Add(possibleEvent);
+                        Debug.Log("worked and played");
+                    }
+                }
+            }
+            else if (worked && !played)
+            {
+                foreach (EventTrigger possibleEvent in AvailableEvents)
+                {
+                    if (possibleEvent.work && !possibleEvent.play)
+                    {
+                        endingEvents.Add(possibleEvent);
+                        Debug.Log("worked only");
+                    }
+                }
+            }
+            else if (!worked && played)
+            {
+                foreach (EventTrigger possibleEvent in AvailableEvents)
+                {
+                    if (!possibleEvent.work && possibleEvent.play)
+                    {
+                        endingEvents.Add(possibleEvent);
+                        Debug.Log("played only");
+                    }
+                }
+            }
+            AvailableEvents.Clear();
+            AvailableEvents = endingEvents;
+
+        }
+
     }
 
-    public void ConvoIndicators(){
+    public void ConvoIndicators()
+    {
 
         foreach (Location loc in (Location[])Enum.GetValues(typeof(Location)))
         {
@@ -61,12 +106,12 @@ public class EventQueue : MonoBehaviour
             if (convo.eventLocation != Location.gameWindow && convo.eventLocation != Location.none)
             {
                 convo.highlight.SetActive(true);
-                
+
             }
         }
     }
 
-//  none, bossChat, friendChat, coworkerOneChat, coworkerTwoChat, onlineFriendChat, gameWindow (6)
+    //  none, bossChat, friendChat, coworkerOneChat, coworkerTwoChat, onlineFriendChat, gameWindow (6)
     // 0, 1, 2, 3 ,4 , and so on
     public void SendLocation(int locationNum)
     {
@@ -80,7 +125,7 @@ public class EventQueue : MonoBehaviour
 
             if (AvailableEvents[i].eventLocation == current)
             {
-               
+
                 RunEvent(AvailableEvents[i]);
                 return;
             }
@@ -92,8 +137,38 @@ public class EventQueue : MonoBehaviour
         Debug.Log(current.nodeName);
         ConvoIndicators();
         current.dialogueRunner.StartDialogue(current.nodeName);
-       // AvailableEvents.Remove(current);
+        // AvailableEvents.Remove(current);
     }
+
+    [YarnCommand("remove")]
+    public void RemoveEvent(string title)
+    {
+        foreach (EventTrigger convo in AvailableEvents)
+        {
+            if (convo.scriptTitle == title)
+            {
+                AvailableEvents.Remove(convo);
+                break;
+            }
+        }
+        ConvoIndicators();
+
+    }
+
+    [YarnCommand("pathway")]
+    public void PathChoices(string path)
+    {
+        if (path == "play")
+        {
+            played = true;
+        }
+        else if (path == "work")
+        {
+            worked = true;
+        }
+
+    }
+
 }
 
 [System.Serializable]
@@ -107,11 +182,13 @@ public class EventTrigger
     public TextAsset script;
     public DialogueRunner dialogueRunner;
     public GameObject highlight;
+    public bool play;
+    public bool work;
 
 }
 
 [System.Serializable]
 public enum Location
 {
-    none, bossChat, friendChat, coworkerOneChat, onlineFriendChat,coworkerTwoChat,  gameWindow
+    none, bossChat, friendChat, coworkerOneChat, onlineFriendChat, coworkerTwoChat, gameWindow
 }

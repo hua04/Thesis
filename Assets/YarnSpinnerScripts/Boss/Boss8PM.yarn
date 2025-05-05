@@ -85,5 +85,6 @@ Do you understand?
         <<Me>>
         Yes
 	    <<wait 1>>
+        <<remove EventQueue Boss8PM>>
 	    <<active BossSelect true>>
 ===
