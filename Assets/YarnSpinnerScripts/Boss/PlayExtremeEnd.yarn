@@ -26,5 +26,7 @@ Ridiculous-
 Based on your performance tonight, I don’t think you're an employee worth keeping.
 <<wait 2>>
 I wish you the best in your future endeavors.
+<<wait 2>>
+<<end EventQueue>>
 
 ===

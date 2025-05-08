@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class SwitchToPersonal : MonoBehaviour
 {
-    public GameObject[] turnOff;
-    public GameObject[] turnOn;
-    public GameObject[] apps; 
+    public List<GameObject> turnOff;
+    public List<GameObject> turnOn;
+    public List<GameObject> apps; 
 
     public void Awake()
     {
-        turnOff = GameObject.FindGameObjectsWithTag("Work");
-        turnOn = GameObject.FindGameObjectsWithTag("Personal");
-        apps = GameObject.FindGameObjectsWithTag("App");
+        turnOff.AddRange(GameObject.FindGameObjectsWithTag("Work"));
+        turnOn.AddRange(GameObject.FindGameObjectsWithTag("Personal"));
+        apps.AddRange(GameObject.FindGameObjectsWithTag("App"));
     }
     public void Start()
     {
@@ -21,6 +21,12 @@ public class SwitchToPersonal : MonoBehaviour
             obj.SetActive(false);
         }
 
+    }
+
+    public void AdjustWork(GameObject app)
+    {
+        turnOff.Remove(app);
+        apps.Remove(app);
     }
     public void SwitchPersonal()
     {
@@ -44,6 +50,7 @@ public class SwitchToPersonal : MonoBehaviour
         {
             obj.SetActive(false);
         }
+
 
     }
 }

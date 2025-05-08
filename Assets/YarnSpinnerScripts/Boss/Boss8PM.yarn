@@ -69,6 +69,7 @@ Do you understand?
         <<Me>>
         Yes
         <<Them>>
+        <<addwork TypingManager 1>>
         <<wait 2>>
         Boss: Good, the file is in your work portal desktop now.
         <<wait 3>>
@@ -79,12 +80,12 @@ Do you understand?
 	    Boss: Just buckle down and get it done.
         <<wait 1>>
 	    Boss: Got it?
-
 <<wait 1>>
 -> Yes
         <<Me>>
         Yes
 	    <<wait 1>>
+        <<active BossSelect true>>
         <<remove EventQueue Boss8PM>>
-	    <<active BossSelect true>>
+	    
 ===

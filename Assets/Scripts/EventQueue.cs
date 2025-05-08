@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 using Yarn.Unity;
 
@@ -12,6 +13,8 @@ public class EventQueue : MonoBehaviour
     public List<GameObject> indicators;
     public bool worked;
     public bool played;
+    public Animator ending;
+    public Animator fade;
     void Start()
     {
         worked = false;
@@ -169,7 +172,31 @@ public class EventQueue : MonoBehaviour
 
     }
 
+    [YarnCommand("setpath")]
+    public void SetPath(string path)
+    {
+        if (path == "work")
+        {
+            worked = true;
+        }
+        else if (path == "play")
+        {
+            played = true;
+        }
+    }
+    [YarnCommand("end")]
+    public void Ending()
+    {
+        fade.SetTrigger("end");  
+        ending.SetTrigger("end");
+
+    }
+
+    
+
 }
+
+
 
 [System.Serializable]
 public class EventTrigger

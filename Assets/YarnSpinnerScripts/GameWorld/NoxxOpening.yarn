@@ -167,7 +167,7 @@ Noxx: To reach the Draconian lands, we’ll have to pass through the Primeval Fo
 <<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
 Noxx: So we should-
 <<notif MessengerIcon>>
-<<timepass Time 30>>
+<<addtime ClockyClock>>
 -> “Give me one second.”
 	<<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
 	Noxx: Sure thing! Take your time.
@@ -178,10 +178,5 @@ Noxx: So we should-
 	Noxx: No worries, take your time.
 	Noxx: I’ve got some things to take care of as well.
 	Noxx: Just let me know once you’re ready to head out.
-
-
-
-
-
-
+<<fmfadeout AdjustImages>>
 ===

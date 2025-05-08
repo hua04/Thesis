@@ -6,13 +6,18 @@ public class KeyClickNoise : MonoBehaviour
 {
     public AudioSource tap;
     // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
-        
+        if (FindObjectsOfType<KeyClickNoise>().Length == 1)
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+// Update is called once per frame
+void Update()
     {
         if (Input.anyKeyDown)
         {

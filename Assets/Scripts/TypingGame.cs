@@ -6,14 +6,9 @@ using UnityEngine.UIElements;
 public class TypingGame : MonoBehaviour
 {
     public TextMeshProUGUI wordOutput;
-    //public TextMeshProUGUI timer;
     public GameObject cursor;
     public float lastY;
     public float currentY;
-    //public int cursorGap;
-    //public float spaceDown;
-    //public int startSpace;
-    //public int rightLimit;
     public ScrollRect scroll;
     public ClockTime timeScript;
     public Vector3 cursorLocation;
@@ -23,18 +18,20 @@ public class TypingGame : MonoBehaviour
     public string typedWord;
     [TextArea(3,7)]
     public string currentWord = "";
-    // public float timeRemaining = 60;
 
     public GameObject desktopApp;
     public GameObject gameApp;
     public Notifications notifications;
+    public TypingAppManager typingAppManager;
+ 
+    public EventQueue eventQueue;
+    public bool notIntro;
 
-   //public GameObject notif;
 
     void Start()
     {
+    
         SetCurrentWord();
-        //notif.SetActive(false);
         currentY = cursor.transform.position.y;
     }
 
@@ -48,7 +45,7 @@ public class TypingGame : MonoBehaviour
         remainingWord = newString;
         wordOutput.text = "<b>" + typedWord + "</b>";
         
-          //wordOutput.text = "<b>" + typedWord + "</b>" + "<color=white>" + remainingWord + "</color>";//Creates color difference between word already typed and not yet typed
+         
     }
 
     // Update is called once per frame
@@ -65,10 +62,7 @@ public class TypingGame : MonoBehaviour
             string keysPressed = Input.inputString;
             if (keysPressed.Length == 1)
             {
-               /* if (wordOutput.textInfo.characterCount != 0)
-                {
-                    cursor.transform.localPosition = wordOutput.textInfo.characterInfo[wordOutput.textInfo.characterCount - 1].bottomLeft;
-                }*/
+              
                 EnterLetter(); //detects letter press
                 EnterLetter();
                 EnterLetter();
@@ -132,19 +126,24 @@ public class TypingGame : MonoBehaviour
         return remainingWord.Length == 0;
     }
 
-    public void SubmitPress(int num)
+    public void SubmitPress()
     {
-        //if (IsComplete())
-        //{
-        //Destroy(desktopApp);
-       // int lastPosition = AppClickOpen.openFiles.IndexOf(gameApp);
-        //AppClickOpen.openFiles.RemoveAt(lastPosition);
-        //Destroy(gameApp);
+        if (IsComplete())
+        {
+        typingAppManager.RemoveFile(desktopApp);
+        Destroy(desktopApp);
+        int lastPosition = AppClickOpen.openFiles.IndexOf(gameApp);
+        AppClickOpen.openFiles.RemoveAt(lastPosition);
+        Destroy(gameApp);
+        timeScript.UpdateTime();
+        notifications.NotifOn();
 
-        timeScript.UpdateTime(num);
-            //notifications.NotifOn();
+        }
+        if (notIntro)
+        {
+            eventQueue.SetPath("work");
+        }
 
-
-        // }
+        Destroy(gameObject);
     }
 }

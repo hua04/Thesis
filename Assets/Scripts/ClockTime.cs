@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using Yarn.Unity;
 
+
 public class ClockTime : MonoBehaviour
 {
     public int min;
@@ -12,10 +13,13 @@ public class ClockTime : MonoBehaviour
     public TMP_Text timeOfDayTMP;
     public int gameClick;
     public MsgBubbles[] msgScript;
+    public Animator ending;
+    public Animator fade;
 
 
     public void Start()
     {
+        Debug.developerConsoleVisible = true;
         var temp = GameObject.FindGameObjectWithTag("Min");
         minTMP = temp.GetComponent<TextMeshProUGUI>();
 
@@ -23,13 +27,15 @@ public class ClockTime : MonoBehaviour
         hourTMP = temp.GetComponent<TextMeshProUGUI>();
         temp = GameObject.FindGameObjectWithTag("AMPM");
         timeOfDayTMP = temp.GetComponent<TextMeshProUGUI>();
-        UpdateTime(0);
+        UpdateTime();
+        Debug.LogError("Script on");
     }
 
-    [YarnCommand("timepass")]
-    public void UpdateTime(int time)
+    [YarnCommand("addtime")]
+    public void UpdateTime()
     {
-        min += time;
+        Debug.LogError("Function Called");
+        min += 30;
         hour = Convert.ToInt32(hourTMP.text);
         Debug.Log(min + ", " + hour);
          if (min == 60)
@@ -37,11 +43,7 @@ public class ClockTime : MonoBehaviour
              hour++;
              min = 00;
          }
-         /*if (hour == 13)
-         {
-             hour = 1;
-             
-         }*/
+        
         Debug.Log(hour + " : " + min);
 
         string x = min.ToString("D2");
@@ -49,14 +51,15 @@ public class ClockTime : MonoBehaviour
 
         minTMP.text = x;
         hourTMP.text = y;
-
-        /*foreach (MsgBubbles bubble in msgScript)
-        {
-
-            bubble.start = false;
-        }*/
-
+        Debug.LogError(hour + ":" + min);
         EventQueue.instance.CheckForEvent(hour, min);
+
+        if (hour == 10)
+        {
+            fade.SetTrigger("end");
+            ending.SetTrigger("end");
+        }
+        Debug.LogError("Complete");
     }
         
 

@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class SwitchToWork : MonoBehaviour
 {
-    public GameObject[] turnOff;
-    public GameObject[] turnOn;
-    public GameObject[] apps;
+    public List<GameObject> turnOff;
+    public List<GameObject> turnOn;
+    public List<GameObject> apps;
 
     public void Awake()
     {
-        turnOn = GameObject.FindGameObjectsWithTag("Work");
-        turnOff = GameObject.FindGameObjectsWithTag("Personal");
-        apps = GameObject.FindGameObjectsWithTag("App");
-        Debug.Log(turnOn);
-        Debug.Log(turnOff);
-
+        turnOn.AddRange(GameObject.FindGameObjectsWithTag("Work"));
+        turnOff.AddRange(GameObject.FindGameObjectsWithTag("Personal"));
+        apps.AddRange(GameObject.FindGameObjectsWithTag("App"));
     }
+
+    public void AdjustWork(GameObject app)
+    {
+        turnOn.Remove(app);
+        apps.Remove(app);
+    }
+
     public void SwitchWork()
     {
       

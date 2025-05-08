@@ -37,6 +37,8 @@ tags:
 	You’ve made your choice then.
 	<<wait 4>>
 	I wish you the best in your future endeavors.
+	<<wait 2>>
+	<<end EventQueue>>
 
 
 

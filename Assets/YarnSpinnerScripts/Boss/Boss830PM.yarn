@@ -8,6 +8,7 @@ I recieved the report
 <<wait 3>>
 I am sending you more files to complete ASAP
 <<wait 1>>
+<<addwork TypingManager 2>>
 <<Me>>
 -> Got it
     Got it

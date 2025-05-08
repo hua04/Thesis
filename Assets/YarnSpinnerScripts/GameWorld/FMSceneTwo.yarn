@@ -247,7 +247,7 @@ title: SceneTwoEnd
 tags:
 ---
 <<notif MessengerIcon>>
-<<timepass Time 30>>
+<<addtime ClockyClock>>
 Noxx: Work calling?
 -> “Yeah…”
 	<i> Noxx sighs</i>

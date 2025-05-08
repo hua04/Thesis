@@ -391,7 +391,7 @@ Tree Four: That’s right, the truth is that you’re a truly worthless being, a
 				Noxx: I think my real mistake is just letting it still get to me.
 				Noxx: I've changed so much since then...
 	<<notif MessengerIcon>>
-	<<timepass Time 30>>
+	<<addtime ClockyClock>>
 	-> “As much as I’d like to continue this talk…”
  		Noxx: Time to go?
 			-> “Yeah…”

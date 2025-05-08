@@ -21,9 +21,6 @@ public class Reset : MonoBehaviour
         {
             SceneManager.LoadScene("StartScene");
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
+    
     }
 }

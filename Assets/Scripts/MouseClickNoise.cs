@@ -6,9 +6,12 @@ public class MouseClickNoise : MonoBehaviour
 {
     public AudioSource click;
     // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
-        
+        if (FindObjectsOfType<MouseClickNoise>().Length == 1)
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
 
     // Update is called once per frame
