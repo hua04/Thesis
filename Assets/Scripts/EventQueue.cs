@@ -15,6 +15,8 @@ public class EventQueue : MonoBehaviour
     public bool played;
     public Animator ending;
     public Animator fade;
+    public bool[] opened;
+    public DialogueRunner[] runners;
     void Start()
     {
         worked = false;
@@ -40,6 +42,11 @@ public class EventQueue : MonoBehaviour
     public void CheckForEvent(int hour, int min) //Checking if event can be triggered at this time
     {
         AvailableEvents.Clear();
+        for (int i = 0; i < opened.Length; i++)
+        {
+            opened[i] = false;
+        }
+
         for (int i = 0; i < EventTriggers.Count; i++)
         {
             var currentEvent = EventTriggers[i];
@@ -158,19 +165,6 @@ public class EventQueue : MonoBehaviour
 
     }
 
-    [YarnCommand("pathway")]
-    public void PathChoices(string path)
-    {
-        if (path == "play")
-        {
-            played = true;
-        }
-        else if (path == "work")
-        {
-            worked = true;
-        }
-
-    }
 
     [YarnCommand("setpath")]
     public void SetPath(string path)
@@ -187,15 +181,22 @@ public class EventQueue : MonoBehaviour
     [YarnCommand("end")]
     public void Ending()
     {
-        fade.SetTrigger("end");  
+        fade.SetTrigger("end");
         ending.SetTrigger("end");
 
     }
 
-    
+    public void OpenCheck(int location)
+    {
+        if (!opened[location - 1])
+        {
+            runners[location - 1].Stop();
+            SendLocation(location);
+            opened[location - 1] = true;
+        }
 
+    }
 }
-
 
 
 [System.Serializable]

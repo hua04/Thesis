@@ -17,7 +17,7 @@ I have a couple of files that I’m behind on.
 	<<wait 3>>
 	I already let the boss know you were handling it, so just send them to him once you’re done.
 	<<wait 1>>
-	<<addwork TypingManager 2>>
+	<<addwork TypingManager 3>>
 	Files sent!
 	<<wait 2>>
 	<<remove EventQueue Coworker9PM>>

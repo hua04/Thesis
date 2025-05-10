@@ -1,32 +1,51 @@
 ﻿title: FMSceneOne
 tags:
 ---
-[Fade in]
+<<stopbgm GameIcon>>
+<<cgswitch AdjustImages "NoxxPrayerCG">>
+<<fmfadein AdjustImages>>
+<<wait 1>>
+...
 <i> When you return back, Nox is sitting on a nearby rock, eyes closed and lips moving </i>
+<i> They're so absorbed in what they're doing, they don't seem to notice your arrival</i>
 -> Wait patiently for them to finish
 	<i>You take a seat beside them and wait</i>
-	<i> Within a few moments their eyes flutter open to as they turn to look at you<i/>
+	<i> Within a few moments their eyes flutter open to as they turn to look at you</i>
+	<<cgoff AdjustImages>>
+	<<wait 1>>
 -> Scare them out of their trance
 	<i> Moving as quietly as you can, you slowly make your way behind Noxx…</i>
-	BOOO!!! (Screen shake?)
+	<b>BOOO!!!</b>
 	<i>...</i>
 	<i>They don’t even flinch</i>
 	<i>A few more seconds pass before they throw their head back to look up at you</i>
-	Noxx: Nice try. (Smirk)
+	<<cgoff AdjustImages>>
+	<<wait 1>>
+	<<expr SpriteChange "NoxxSpriteTeasing">>
+	Noxx: Nice try.
 -> Tap them on the shoulder
 	<i> Walking over to them, you kneel down and give their shoulder a gentle pat </i>
 	<i>... No reaction</i>
 	<i> Just as you start reaching out to give them a second tap, their eyes flutter open to meet yours</i>
+	<<cgoff AdjustImages>>
+	<<wait 1>>
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	Noxx: Why, hello there.
+<<expr SpriteChange "NoxxSpriteNeutral">>
 Noxx : Are you ready to go?
 -> “What was that?”
+	<<expr SpriteChange "NoxxSpriteConfused">>
 	Noxx: What was what?
 	<i> Before you can elaborate, realization seems to strike them</i>
+	<<expr SpriteChange "NoxxSpriteNeutral">>
 	Noxx: Oh.
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	Noxx: Just a conversation.
+	<<expr SpriteChange "NoxxSpriteNeutral">>
 	<i>Without explaining further, they stand. It’s only then that you notice the bundle of herbs they were cradling in their hands</i>
 	<i>They place the bundle on the rock they had been sitting on, before turning to face you.</i>
-	Noxx: So… ready?
+	<<expr SpriteChange "NoxxSpriteHappy">>
+	Noxx: So... ready?
 	-> “Yep”
 		<<jump AdventureStart>>
 -> “Yep, ready!”
@@ -36,56 +55,84 @@ Noxx : Are you ready to go?
 title: AdventureStart
 tags:
 ---
+<<expr SpriteChange "NoxxSpriteNeutral">>
 Noxx: Right-
 <i>Noxx pulls a compass and a map out from the pouch strapped to their leg</i>
 Noxx: My understanding is that we’re meant to head west from here to reach the forest, however-
+<<expr SpriteChange "NoxxSpriteIrritated">>
 <i> They squint at the map, looking back and forth between the paper and your surroundings</i>
 Noxx: -once we’re there, we can’t rely on consistency.
+<<expr SpriteChange "NoxxSpriteWorried">>
 <i>With a sigh, they tuck the map back into their bag</i>
+<<expr SpriteChange "NoxxSpriteHappy">>
 Noxx: C’mon, this way.
 <i>Turning to your right, the two of you head towards a nearby thicket.</i>
-(Screen dark, time passing)
+<<fmfadeout AdjustImages>>
 <i> The two of you pass time chattering as you make your way further and further into the forest. </i>
 <i> Every so often Noxx pauses to consult their compass and glance up at the sky. </i>
-(Screen fade back in)
+<<bgswitch AdjustImages "DeepForestBG">>
+<<fmfadein AdjustImages>>
 -> “How’re we doing, captain?”
+	<<expr SpriteChange "NoxxSpriteJoy">>
 	Noxx: Just fine, crew,  just fine.
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	<i>Content with their findings, Noxx turns from the sky to look at you and point in the direction they had been leading you </i>
 	Noxx: We keep going thi-
 -> “Are we lost?”
+	<<expr SpriteChange "NoxxSpriteNeutral">>
 	<i>They click their tongue at you, not turning away from the sky to address your accusation </i>
+	<<expr SpriteChange "NoxxSpriteTeasing">>
 	Noxx: Oh, ye of little faith…
+	<<expr SpriteChange "NoxxSpriteWink">>
 	Noxx: We are doing just fine, thank you very much!
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	<i>Content with their findings, Noxx continues in the direction that they had been leading you in </i>
+	<<expr SpriteChange "NoxxSpriteAnxious">>
 	Noxx: But you can never be too careful, don’t let the peace of the forest trick you into complacen-
 -> “Are we there yet?”
+	<<expr SpriteChange "NoxxSpriteNeutral">>
 	<i> They click their tongue at you, still focused on the sky above them </i>
+	<<expr SpriteChange "NoxxSpriteWink">>
 	Noxx: Nowhere near close, my friend!
+	<<expr SpriteChange "NoxxSpriteJoy">>
 	<i> They turn from the sky with a chuckle</i>
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	Noxx: We are in for a long ride, I told you to ready yourse-
+<<expr SpriteChange "NoxxSpriteConfused">>
+<<switchtracks GameIcon "AdventureTension">>
 <i> Noxx pauses, brow furrowing in concentration</i>
 ->”What’s wrong?”
 	<i> Before you can get the words out, Noxx holds a finger up to their lips, tilting their head to the side as if trying to hear something </i>
 ->Stay Silent
 	<i> You watch them as they tilt their head to the side, holding their breath as if waiting to hear something</i>
-???: …thetic
+???: ...thetic
+<<expr SpriteChange "NoxxSpriteAlarmed">>
 <i> Noxx turns to look at you, a silent question in their eyes. </i>
 -> Nod
+	<<expr SpriteChange "NoxxSpriteWorried">>
 	<i> Noxx turns to look in the direction of the sound, brow furrowed in thought</i>
+	<<expr SpriteChange "NoxxSpriteAnxious">>
 	<i> After a second, they turn back to you, gesturing onwards</i>
 -> Shrug
+	<<expr SpriteChange "NoxxSpriteWorried">>
 	<i> Noxx looks perplexed, brow furrowed in thought</i>
+	<<expr SpriteChange "NoxxSpriteAnxious">>
 	<i> They glance around, as if looking for something</i>
 ???: Ha! What brainless creatures, it’s a miracle you’ve gotten this far.
+<<expr SpriteChange "NoxxSpriteWorried">>
 <i> This time the voice is unmistakable, echoing loudly in your ears </i>
 <i> Yet there’s no one but you and Noxx around as far as the eye can see </i>
 ???: Seriously?! Can’t you idiots see what’s right in front of you?
 ???: Pathetic!
 ???: Disgraceful!!!
 <i> The voices seemingly multiply, jeering and chortling at you from multiple directions</i>
+<<expr SpriteChange "NoxxSpriteAlarmed">>
 <i> Noxx gasps, pointing up into the tree behind you</i>
-(Background change/cg?)
+<<fmfadeout AdjustImages>>
+<<spriteoff SpriteChange>>
 <i> Instead of seeing anyone perched in the branches, you instead turn to face a gnarled face hidden among the knots of the bark.
+<<bgswitch AdjustImages MockingTreesBG>>
+<<fmfadein AdjustImages>>
 <i> At your realization, the tree grimaces at you </i>
 Tree One: Oh look! It seems the imbecile has finally gotten it?
 Tree Two: Took them long enough!
@@ -97,7 +144,7 @@ Tree Four: Hah! They were probably sent out on a suicide mission. Easiest to let
 	<i>The trees cackle with a sadistic delight</i>
 	Tree Three: Imagine stumbling into <i>our</i> neck of the woods and having the nerve to tell <i>us</i> to shut up.
 	Tree One: Don’t be such a spoil sport!
-	Treen Two: Such entitlement.
+	Tree Two: Such entitlement.
 -> “What’s your problem?!”
 	Tree One: Problem? We’ve got no problem!
 	Tree Three: If anything, you seem like the one with a problem, kicking up a fuss when we were just playing around
@@ -107,7 +154,11 @@ Tree Four: Hah! They were probably sent out on a suicide mission. Easiest to let
 	Tree Two: Aww, did your little feelings get hurt?
 	Tree Four: Gonna run home crying?
 	Tree One: What are you, a child?
+
+<<expr SpriteChange "NoxxSpriteIrritated">>
+<<cgswitch AdjustImages "NoxxTreesCG">>
 Noxx: That’s enough!
+<<spriteon SpriteChange>>
 Tree One: Hah! Is the tiefling runt trying to play hero?
 Tree Three: Who are you to tell us to stop?
 <i>Noxx’s jaw clenches</i>
@@ -115,8 +166,12 @@ Noxx: Have we done something to offend you?
 Tree Four: Have you? Let’s see…
 Tree Two: Disturbing our forest with your obnoxious presence might be a start!
 <i> While the trees continue to jeer at you, Noxx leans over and whispers furtively into your ear</i>
+<<cgoff AdjustImages>>
+<<wait 1>>
+<<expr SpriteChange "NoxxSpriteAnxious">>
 Noxx: I don’t think we’re getting anywhere with this, we should just move on.
 -> “We can’t just leave this here!”
+	<<spriteoff SpriteChange>>
 	<i>As you open your mouth to protest, the trees take notice and focus their attention back to you.</i>
 	Tree One: Quiet all! The worm has something to say!
 	<i> The forest falls silent as the trees await your next words with barely suppressed amusement.</i>
@@ -126,294 +181,471 @@ Noxx: I don’t think we’re getting anywhere with this, we should just move on
 		Tree Four: Yeah, and while we’re at it, why don’t we all sit in a circle and sing nursery rhymes?
 		Tree Two: It’s a wonder you’ve made it this far without a working brain.
 		Tree Three: Why on earth would we be “~nice to you~”? This is reality, you imbecile, and we’re not about to sugarcoat your pathetic existence.
+		<i>Noxx gently tugs on your hand, guiding you to start moving</i>
 	-> “You all are a bunch of assholes!”
 		<i>The silence stretches as your words hang in the air</i>
 		<i>-before the trees explode into howls of laughter</i>
 		Tree One: Oh boo hoo! Some daft traveler thinks I’m an asshole, how will I ever recover?!
 		Tree Three: Newsflash, you dunce, we couldn’t care in the slightest what your pathetic thoughts on us are.
+		<i>Noxx gently pulls you to start moving</i>
 	-> Agree with Noxx
 		<i>Yeah, you’re not getting anywhere here</i>
+		<<spriteon SpriteChange>>
+		<<expr SpriteChange "NoxxSpriteHappy">>
 		<i>You nod over at Noxx and they flick their head in the direction to go</i>
 -> Nod
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	<i> Noxx squeezes your hand, flicking their head in the direction to head</i>
 	Noxx: Let’s go
-<i> As the two of you start to walk again, the jeers of the trees only intensify</i>
+<i> As the two of you walk through, the jeers of the trees only intensify</i>
+<<spriteoff SpriteChange>>
+<<expr SpriteChange "NoxxSpriteWorried">>
 Tree One: Not only are they idiots, but a couple of cowards as well.
 Tree Three: What’s the matter, can’t face the truth of your pathetic existence?
 Tree Two: Just because the people around you coddle and shield you doesn’t mean we’ll do the same!
 Tree Four: That’s right, the truth is that you’re a truly worthless being, and you’ll never amount to anything!
 <i> Amidst the jeers and cackles, you feel something gently press against your ears, subduing the insults into soft muffles</i>
+<<spriteon SpriteChange>>
+<<expr SpriteChange "NoxxSpriteIrritated">>
 <i> Looking behind you, you see that Noxx has pressed their hands over your ears, blocking out sound as they glare up at the trees</i>
 -> “Thank you”
+	<<jump Cover>>
+-> Remove their hands from your ears
+	<<jump NoCover>>
+-> Hold their hand instead
+	<<jump HandHold>>
+===
+title: Cover
+tags:
+---
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	<i> You don’t hear your words as they exit your lips, but Noxx smiles reassuringly at you</i>
-	<i> You see their lips move as they mutter something you can’t make out</i> (Eye glowing sprite?)
-	<i> When they move their hands, something seems to linger behind, blocking out the noises </i>
-	<i> Before you have time to think too deeply about it, Noxx gestures in the direction you had been walking, and the two of you continue on your way <i>
-	(Dark Screen, change bg back?)
+	<<expr SpriteChange "NoxxSpriteWorried">>
+	<i> You see their lips move as they mutter something you can’t make out</i>
+	<<expr SpriteChange "NoxxSpriteNeutral">>
+	<i> When they move their hands, something seems to linger behind, blocking out the noise</i>
+	<i> Before you have time to think too deeply about it, Noxx gestures in the direction you had been walking, and the two of you continue on your way </i>
+	<<fmfadeout AdjustImages>>
+	<<wait 1>>
+	<<expr SpriteChange "NoxxSpriteAnxious">>
+	<<bgswitch AdjustImages DeepForestBG>>
+	<<wait 1>>
+	<<switchtracks GameIcon "Noxx">>
+	<<fmfadein AdjustImages>>
 	<i> It takes a while, but eventually you no longer see scowling faces on the trees around you</i>
 	<i> The space around your ear releases with a pop and the sounds of the forest rush in to fill them</i>
-	Noxx: That was… something.
+	<<expr SpriteChange "NoxxSpriteWorried">>
+	Noxx: That was... something.
+	<<expr SpriteChange "NoxxSpriteDisappointed">>
 	<i> Noxx looks drained, gazing ahead absentmindedly</i>
 	-> “Are you alright?”
+		<<expr SpriteChange "NoxxSpriteAnxious">>
 		<i> They stiffen at your question, straightening up to stand taller</i>
+		<<expr SpriteChange "NoxxSpriteHappy">>
 		Noxx: Yeah, don’t worry!
 		Noxx: Just lost in thought…
 		<<notif MessengerIcon>>
-		<<timepass Time 30>>
+		<<addtime ClockyClock>>
 		-> “Oh shoot”
-		-> “Hold on a sec”
+		<<expr SpriteChange "NoxxSpriteAnxious">>
 			Noxx: Is everything okay?
 			-> “It’s another message…”
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				Noxx: Oh gotcha! Go ahead and do what you need to do
 				Noxx: I’ll wait here until you’re ready to go again.
+				<<fmfadeout AdjustImages>>
+				<<setpath EventQueue "play">>
 			-> “There’s something I need to take care of”
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				Noxx: No worries! You go do what you need to do
 				Noxx: I’ll wait here until you’re ready to go again.
+				<<fmfadeout AdjustImages>>
+				<<setpath EventQueue "play">>
 			<<stop>>
 	-> “Shall we take a break?”
+		<<expr SpriteChange "NoxxSpriteAnxious">>
 		<i> Noxx jolts straighter, shaking their head vigorously</i>
 		Noxx: No, I’m okay!
+		<<expr SpriteChange "NoxxSpriteAnxious">>
 		Noxx: I mean, not unless you want a break?
+		<<expr SpriteChange "NoxxSpriteHappy">>
 		Noxx: But please, no need to stop on my account, I was just lost in thought.
 		<<notif MessengerIcon>>
-		<<timepass Time 30>>
-		-> “Oh shoot”
+		<<addtime ClockyClock>>
 		-> “Hold on a sec”
+			<<expr SpriteChange "NoxxSpriteAnxious">>
 			Noxx: Is everything okay?
 			-> “It’s another message…”
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				Noxx: Oh gotcha! In that case a break is definitely in order.
 				Noxx: I’ll wait here until you’re ready to go again.
+				<<fmfadeout AdjustImages>>
+				<<setpath EventQueue "play">>
 			-> “There’s something I need to take care of”
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				Noxx: No worries! Break time it is, then!
 				Noxx: I’ll wait here until you’re ready to go again.
+				<<fmfadeout AdjustImages>>
+				<<setpath EventQueue "play">>
 			<<stop>>
 	-> Say nothing
+		<<expr SpriteChange "NoxxSpriteHappy">>
 		<i> Noxx turns to face you with a smile that doesn’t quite meet their eyes</i>
+		<<expr SpriteChange "NoxxSpriteJoy">>
 		Noxx: Shall we get going?
 		<<notif MessengerIcon>>
-		<<timepass Time 30>>
-		-> “Oh shoot”
+		<<addtime ClockyClock>>
 		-> “Hold on a sec”
+			<<expr SpriteChange "NoxxSpriteAnxious">>
 			Noxx: Is everything okay?
 			-> “It’s another message…”
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				Noxx: Oh gotcha! Go ahead and do what you need to do
 				Noxx: I’ll wait here until you’re ready to go again.
 			-> “There’s something I need to take care of”
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				Noxx: No worries! You go do what you need to do
 				Noxx: I’ll wait here until you’re ready to go again.
+				<<fmfadeout AdjustImages>>
+				<<setpath EventQueue "play">>
 			<<stop>>
--> Remove their hands from your ears
+===
+title: NoCover
+tags:
+---
+	<<expr SpriteChange "NoxxSpriteAnxious">>
 	<i> As soon as your hands start to lift theirs from your ears, Noxx pulls them back with an apologetic look.</i>
 	Tree One: Oh what a wretched tiefling, not even their friend wants them around.
 	Tree Four: Can’t blame them, who would want a bumbling dolt like that helping them out.
 	Tree Three: Probably does more harm than good!
+	<<expr SpriteChange "NoxxSpriteAlarmed">>
 	<i> Facing Noxx as the trees screech at you, you don’t miss the way they tense at the comment</i>
 	-> “That’s not true!”
 		Tree Four: Ah, but isn’t it?
 		Tree Two: You don’t need to feel so bad, that little tiefling of yours is used to rejection after all.
+		<<expr SpriteChange "NoxxSpriteScared">>
 		Noxx: We should go, <b>now</b>
+		<<expr SpriteChange "NoxxSpriteAnxious">>
 		<i>Noxx gestures in the direction you two had been heading, starting to hurry towards it</i>
 		Tree One: Oh? Does your companion not know?
 		Tree Three: Of course not! They wouldn’t bother with the tiefling if they knew how useless they truly were.
 		Tree Two: Traveler! Did you know that your tiefling there was so despised by their tribe that they held a celebration once they were finally free of your friend?
+		<<expr SpriteChange "NoxxSpriteWorried">>
 		<i> Noxx is walking so quickly you struggle to match their stride</i>
 		Tree One: No one wanted them there, and soon enough you’ll see why!
 		Tree Four: You can run all you want, but you can never escape the truth!
-		(Change BG?)
+		<<fmfadeout AdjustImages>>
+		<<wait 1>>
+		<<switchtracks GameIcon "Noxx">>
+		<<bgswitch AdjustImages DeepForestBG>>
+		<<wait 1>>
+		<<fmfadein AdjustImages>>
 		<i>The cackles of the trees echo behind you as you leave behind the odd spiteful kind for the silent ones that you’ve never been so happy to see</i>
-		<i> Noxx slows their pace, but maintains their silence, face stony as they stare ahead </i>
+		<<expr SpriteChange "NoxxSpriteDisappointed">>
 	-> “You know they’re full of shit, right?”
 		Tree One: Au contraire! We know more than you, naive traveler.
 		Tree Two: That little tiefling of yours, they know the truth as well as we do…
+		<<expr SpriteChange "NoxxSpriteScared">>
 		<i> Noxx suddenly tugs on your arm </i>
 		Noxx: Let’s go, <b> now</b> please.
 		Tree Three: Oh? Did we hit a nerve, tiefling? 
+		<<expr SpriteChange "NoxxSpriteAnxious">>
 		<i> Noxx starts to hurry away, glancing over their shoulder to make sure you were following along</i>
+		<<expr SpriteChange "NoxxSpriteWorried">>
 		<i> You walk at a brisk pace, but that doesn’t stop the trees’ words from reaching you</i>
 		Tree Four: Does your companion not know that you were the tribe runt? So useless that you weren’t even worth the food you cost to keep alive?
 		Tree One: Too slow and weak to help in any real way, they all hated you.
 		<i>The trees start to thin and alongside their voices, but that doesn’t stop them from getting a final couple of jabs in</i>
 		Tree Four: You can run all you like, but nothing will change the truth.
 		Tree One: You’re just destined to be a burden, and soon they’ll see it too.
-		(Change BG?)
+		<<fmfadeout AdjustImages>>
+		<<wait 1>>
+		<<bgswitch AdjustImages "DeepForestBG">>
+		<<wait 1>>
+		<<switchtracks GameIcon "Noxx">>
+		<<fmfadein AdjustImages>>
 		<i> With the trees left behind, the sudden silence is almost deafening </i>
-		<i> Noxx slows their pace, but says nothing. They just stare ahead stonily</i>
+		<<expr SpriteChange "NoxxSpriteDisappointed">>
 	-> Stay silent
+		<<expr SpriteChange "NoxxSpriteScared">>
 		Tree Four: HA! See!!! They don’t even bother denying it
 		Tree Three: Not even your supposed “companion” can stand you, but you already knew that, didn’t you?
-		<i> Noxx starts walking briskly, continuing in the direction the two of you had been heading, and you trail behind them</i?
+		<<expr SpriteChange "NoxxSpriteAnxious">>
+		<i> Noxx starts walking briskly, continuing in the direction the two of you had been heading, and you trail behind them</i>
 		Tree One: Yet you stick around anyways, are you so desperate for any crumbs of affection?
 		Tree Two: Hey traveler! Did you know that tiefling of yours was so despised by their own tribe that they were kicked out?
+		<<expr SpriteChange "NoxxSpriteWorried">>
 		Tree Three: Imagine being so useless that you’re not even worth the food you eat!
 		Tree Four: Could you blame them? They were so slow and weak, it was pointless for them to even try to teach that runt anything!
+		<<fmfadeout AdjustImages>>
+		<<wait 1>>
+		<<switchtracks GameIcon "Noxx">>
+		<<bgswitch AdjustImages DeepForestBG>>
+		<<wait 1>>
+		<<fmfadein AdjustImages>>
 		<i> The trees gradually start to thin into the more common, silent trees</i>
 		<i> Before long, the voices are entirely imperceptible, just leaving behind a heaviness in the air</i>
-		<i> Noxx slows their pace, staring ahead stonily.</i>
-
+		<<expr SpriteChange "NoxxSpriteDisappointed">>
+<i> Noxx slows their pace, staring ahead stonily.</i>
 	-> “Do you want to talk about what just happened?”
 		<i>Your offer hangs in the air for a few heavy seconds</i>
+		<<expr SpriteChange "NoxxSpriteWorried">>
 		Noxx: No.
+		<<expr SpriteChange "NoxxSpriteAnxious">>
 		Noxx: Not right now at least.
+		<<expr SpriteChange "NoxxSpriteHappy">>
 		Noxx: But thank you, I appreciate the offer.
 		<i> The warmth has started to re-enter their voice and you feel the tension start to fade</i>
 		<<notif MessengerIcon>>
-		<<timepass Time 30>>
+		<<addtime ClockyClock>>
 			-> “Are you going to be alright if I go now?”
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				<i> They salute you lazily, a tired smile on their face</i>
+				<<expr SpriteChange "NoxxSpriteWink">>
 				Noxx: Don’t worry about me, I can handle this.
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				Noxx: You go do what you need to do, and I’ll be here when you get back.
 				Noxx: See ya, soldier.
+				<<fmfadeout AdjustImages>>
+				<<setpath EventQueue "play">>
 				<<stop>>
 			-> “Bad timing, but something just came up.”
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				Noxx: I get it.
 				Noxx: Don’t worry, I’ll rest here while you deal with that.
 				Noxx: See you soon, yeah?
+				<<fmfadeout AdjustImages>>
+				<<setpath EventQueue "play">>
 				<<stop>>
 			-> “Damn.”
+				<<expr SpriteChange "NoxxSpriteAnxious">>
 				Noxx: Hm?
 				-> “New message.”
+					<<expr SpriteChange "NoxxSpriteJoy">>
 					<i>They laugh, light and airy</i>
 					Noxx: No rest for the wicked, eh?
+					<<expr SpriteChange "NoxxSpriteHappy">>
 					Noxx: Go ahead and take care of that, I’ll just rest here.
 					Noxx: Don’t worry about me, I’ll be just fine
+					<<fmfadeout AdjustImages>>
+					<<setpath EventQueue "play">>
 					<<stop>>
 	-> “Your old tribe sucked!”
+		<<expr SpriteChange "NoxxSpriteJoy">>
 		<i>Noxx laughs, but there’s no humor behind the sound</i>
+		<<expr SpriteChange "NoxxSpriteHappy">>
 		Noxx: Tell me about it.
 		<<notif MessengerIcon>>
-		<<timepass Time 30>>
+		<<addtime ClockyClock>>
 		-> “...This is horrible timing”
+			<<expr SpriteChange "NoxxSpriteNeutral">>
 			<i>Noxx picks up on what you mean</i>
 			Noxx: Maybe not, I could use a little time to think.
 			-> “Are you going to be okay?”
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				<i> Noxx smiles, a little wobbly but genuine</i>
 				Noxx: I will be, so don’t worry about me
 				Noxx: I’ll see you once you’re ready to get back into it.
+				<<fmfadeout AdjustImages>>
+				<<setpath EventQueue "play">>
 				<<stop>>
 		-> “So I hate to do this right now, but…”
+			<<expr SpriteChange "NoxxSpriteNeutral">>
 			Noxx: Time to go?
 			-> “Yeah”
 				Noxx: Don’t worry about it, I could actually use the time to myself.
+				<<expr SpriteChange "NoxxSpriteWorried>>
 				<i>They huff out a breath, posture loosening.</i>
 					-> “Are you sure you’re okay?”
+						<<expr SpriteChange "NoxxSpriteHappy">>
 						<i> They smile at you, small but genuine</i>
 						Noxx: I will be.
 						Noxx: In any case, don’t let me keep you.
 						Noxx: I’ll be here once you’re done.
+						<<fmfadeout AdjustImages>>
+						<<setpath EventQueue "play">>
 						<<stop>>
 		-> “Aw, shit”
+			<<expr SpriteChange "NoxxSpriteNeutral">>
 			Noxx: You have to go?
 			-> “Yeah”
+				<<expr SpriteChange "NoxxSpriteWorried>>
 				<i> They sigh, slumping over with the exhale</i>
 				Noxx: That’s okay, I could use the time to think
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				<i> They offer you a small, tentative smile</i>
 				Noxx: Don’t worry about me, I’ll be just fine.
 				Noxx: See you again soon.
+				<<fmfadeout AdjustImages>>
+				<<setpath EventQueue "play">>
 				<<stop>>
 	-> “You know I care a lot about you, right?”
+		<<expr SpriteChange "NoxxSpriteWorried">>
 		Noxx: Yeah.
 		Noxx: I do.
 		<i>Your words hang heavy in the air between the two of you</i>
 		<<notif MessengerIcon>>
-		<<timepass Time 30>>
+		<<addtime ClockyClock>>
 		-> “As much as I want to continue this conversation…”
+			<<expr SpriteChange "NoxxSpriteNeutral">>
 			Noxx: Time to go?
 			-> “Yeah”
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				Noxx: “No worries, we can finish this later.”
 				Noxx: “See you soon.”
+				<<fmfadeout AdjustImages>>
+				<<setpath EventQueue "play">>
 				<<stop>>
 		-> You sigh
+			<<expr SpriteChange "NoxxSpriteNeutral">>
 			<i> Noxx tilts their head at you questioningly</i>
 			-> “I just got a message.”
 				Noxx: Oh!
 				Noxx: Well, I’ll see you when you get back?
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				-> “Yeah, see you.”
-					<<stop>>
+				<<fmfadeout AdjustImages>>
+				<<setpath EventQueue "play">>
+				<<stop>>
 	-> Stay silent
 		<<notif MessengerIcon>>
-		<<timepass Time 30>>
+		<<addtime ClockyClock>>
 			-> “I need to go”
+				<<expr SpriteChange "NoxxSpriteNeutral">>
 				<i> Noxx nods </i>
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				Noxx: Take care, I’ll be waiting here
-				<<stop>>
-->Hold their hand instead
+				<<fmfadeout AdjustImages>>
+				<<setpath EventQueue "play">>
+			<<stop>>		
+===
+title: HandHold
+tags:
+---
+	<<expr SpriteChange "NoxxSpriteAnxious">>
 	<i> As you reach up to grab their hands, Noxx lets go</i>
+	<<expr SpriteChange "NoxxSpriteAlarmed">>
 	<i> But instead of letting them retreat completely, you grab one of their hands, interlacing their fingers with yours</i>
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	<i> The forest falls silent for a second</i>
+	<<expr SpriteChange "NoxxSpriteAnxious">>
 	Tree One: How touching! The tiefling outcast finds a kindred spirit at last.
 	Tree Three: Perhaps their shared incompetence makes a fine connection.
+	<<expr SpriteChange "NoxxSpriteIrritated">>
 	<i> Noxx’s grip tightens</i>
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	<i>They look at you, tilting their head in the direction you were heading before lightly tugging you to follow them</i>
+	<<expr SpriteChange "NoxxSpriteAnxious">>
 	Tree Two: Naive traveler, has your tiefling friend ever told you about their youth?
+	<<expr SpriteChange "NoxxSpriteScared">>
 	Tree Four: Your friend there was quite the burden, their tribe couldn’t stand to put up with them
 	-> Give their hand a squeeze
+		<<expr SpriteChange "NoxxSpriteAnxious">>
 		<i> They squeeze back, not looking away from the path in front of them</i>
 	-> Ignore the trees’ words
-		<i> Noxx barely seems to register their words, eyes firmly trained in front of them</i>
+		<<expr SpriteChange "NoxxSpriteAnxious">>
+		<i> Noxx keeps their eyes firmly trained in front of them</i>
 	Tree Three: So much so, that they were ditched the second the opportunity arose.
 	Tree One: It simply wasn’t worth keeping someone around that wasn’t even worth the food they cost to keep alive.
 	Tree Four: All the other tieflings their age had figured out how to be useful and contribute.
+	<<expr SpriteChange "NoxxSpriteWorried">>
 	Tree One: But this one? Failed at everything they tried.
 	<i> The noise starts to fade as the thicket of trees start looking more normal and less… enraged</i>
 	Tree Two: Couldn’t even stop themselves from causing trouble for the others.
 	Tree Three: They always said you’d amount to nothing, and were they wrong?
 	Tree One: What have you really done with your life?
+	<<fmfadeout AdjustImages>>
+	<<wait 1>>
+	<<switchtracks GameIcon "Noxx">>
+	<<bgswitch AdjustImages DeepForestBG>>
+	<<wait 1>>
+	<<fmfadein AdjustImages>>
 	<i>With those words echoing in your head, you and Noxx finally reach an area beyond the range of the screeching trees</i>
+	<<expr SpriteChange "NoxxSpriteAnxious">>
 	Noxx: Are you alright?
 	<i> They’ve stopped walking, giving your hand a squeeze as they scan your face</i>
 	-> “Me? I’m more worried about you!”
+		<<expr SpriteChange "NoxxSpriteJoy">>
 		<i> Noxx chuckles</i>
+		<<expr SpriteChange "NoxxSpriteHappy">>
 		Noxx: You never have to worry about me.
 			-> “You know that’s not going to stop me”
 				<i> Their smile takes on a melancholy edge<i>
+				<<expr SpriteChange "NoxxSpriteAnxious">>
 				Noxx: Yeah, I know.
+				<<expr SpriteChange "NoxxSpriteHappy>>
 				Noxx: You’re too kind for your own good, my dear traveler.
 			-> “Yeah, you’re one of the strongest people I know”
+				<<expr SpriteChange "NoxxSpriteTeasing">>
 				<i> They puff their chest out as they curl their bicep </i>
+				<<expr SpriteChange "NoxxSpriteWink">>
 				Noxx: Damn right I am!
 	-> “Yeah, I’m alright”
+		<<expr SpriteChange "NoxxSpriteHappy">>
 		Noxx: Good, that’s nice to hear.
 
 	-> “Are you okay though?”
+		<<expr SpriteChange "NoxxSpriteWorried">>
 		<i> Noxx heaves out a sigh </i>
 		Noxx: Yeah… I am.
+		<<expr SpriteChange "NoxxSpriteAnxious">>
 		Noxx: I didn’t expect that to hurt as much as it did.
 			->”Do you want to talk about it?”
 				Noxx: I… don’t know.
 				Noxx: It all happened so long ago that I barely even know what I would say about it at this point.
+				<<expr SpriteChange "NoxxSpriteWorried">>
 				Noxx: It’s all just… a part of me at this point, so to say.
 			->”I’m sorry you went through all that”
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				Noxx: It’s alright.
 				Noxx: It was ages ago, so long ago that it’s been a while since I even thought about any of them.
+				<<expr SpriteChange "NoxxSpriteWorried">>
 				Noxx: But some experiences run unexpectedly deep, <i> that</i> part definitely surprised me.
 			->”I hope you know that none of that was true”
+				<<expr SpriteChange "NoxxSpriteWorried">>
 				Noxx: No, there definitely was some level of truth there.
+				<<expr SpriteChange "NoxxSpriteAnxious">>
 				Noxx: I think my real mistake is just letting it still get to me.
+				<<expr SpriteChange "NoxxSpriteHappy">>
 				Noxx: I've changed so much since then...
 	<<notif MessengerIcon>>
 	<<addtime ClockyClock>>
 	-> “As much as I’d like to continue this talk…”
+		<<expr SpriteChange "NoxxSpriteNeutral">>
  		Noxx: Time to go?
 			-> “Yeah…”
+			<<expr SpriteChange "NoxxSpriteHappy">>
 			Noxx: That’s okay! There will be other chances to talk.
 			Noxx: I’ll be waiting here, dear traveler.
 			Noxx: Don’t let me keep you
+			<<fmfadeout AdjustImages>>
+			<<setpath EventQueue "play">>
 			<<stop>>
 	-> You sigh with irritation
+		<<expr SpriteChange "NoxxSpriteAnxious">>
 		Noxx: What’s wrong?
 		-> “I just got another message”
+			<<expr SpriteChange "NoxxSpriteWorried">>
 			 Noxx: Oh.
 			<i> Their shoulders sag</i>
+			<<expr SpriteChange "NoxxSpriteHappy">>
 			Noxx: I was worried for a second, but that’s not a big issue!
 			Noxx: Take your time, I’ll be waiting here for you.
+			<<fmfadeout AdjustImages>>
+			<<setpath EventQueue "play">>
 			<<stop>>
 	-> “Noxx, I’m so sorry…”
+		<<expr SpriteChange "NoxxSpriteAnxious">>
 		<i> They look at you questioningly, clearly confused</i>
 		-> “I need to go.”
+			<<expr SpriteChange "NoxxSpriteNeutral">>
 			Noxx: Oh!
+			<<expr SpriteChange "NoxxSpriteHappy">>
 			Noxx: You scared me for a second there, I thought I was about to get some really bad news.
 			Noxx: You don’t need to apologize for that, my dear traveler.
 			Noxx: Take care of what you need to, and I’ll be here for you once you’re done.
+			<<fmfadeout AdjustImages>>
+			<<setpath EventQueue "play">>
 			<<stop>>
 
 ===

@@ -2,16 +2,21 @@
 tags:
 ---
 <<stopbgm GameIcon>>
+<<cgswitch AdjustImages "NoxxIntroCG">>
 <<wait 1>>
-<<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
+<<fmfadein AdjustImages>>
+<<wait 1>>
+<<expr SpriteChange "NoxxSpriteHappy">>
 Noxx: Ah!
 <i>You are giddily greeted by Noxx, their tail swishing in delight as they clasp your hands in theirs.</i>
 Noxx: Welcome back!
-<<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
+<<cgoff AdjustImages>>
+<<wait 1>>
+<<expr SpriteChange "NoxxSpriteHappy">>
 Noxx: You've got perfect timing! We just got a tip on the whereabouts of the kidnapped prince.
-<<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
+<<expr SpriteChange "NoxxSpriteJoy">>
 Noxx: It seems like we're getting close.
-<<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
+<<expr SpriteChange "NoxxSpriteHappy">>
 -> "That’s great!"
 	<<jump Great>>
 -> "Remind me about the prince again?"
@@ -21,72 +26,74 @@ Noxx: It seems like we're getting close.
 ===
 title: Great
 ---
-<<expr ExpressionChangeNoxx "NoxxSpriteJoy">>
+<<expr SpriteChange "NoxxSpriteJoy">>
 Noxx: Yeah!
-<<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
+<<expr SpriteChange "NoxxSpriteNeutral">>
 Noxx: Thanks for bearing with me through all this.
 -> “It’s been fun”
-	<<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	Noxx: I’m glad you think so too!
 	Noxx: Couldn’t have asked for a better companion myself.
 	<i>They sling their arm over your shoulder playfully, squeezing you in a little half hug before turning their attention back to the topic at hand.</i>
 -> “No prob!”
-	<<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	<i>Their grin softens, giving your hands a gentle squeeze before turning back to the topic at hand.</i>
 -> “I’ll send you the bill later.”
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	<i>Noxx chuckles for a second before crossing their arms over their chest and composing their expression into an exaggerated pout.</i>
-	<<expr ExpressionChangeNoxx "NoxxSpriteSad">>
-	Noxx: Isn’t my delightful company payment enough?
-	<<expr ExpressionChangeNoxx "NoxxSpriteFlirt">>
+	<<expr SpriteChange "NoxxSpriteSad">>
+	Noxx: All I do for you... and this is the thanks I get?
+	<<expr SpriteChange "NoxxSpriteWink">>
 	<i>They finish off the act with a dramatic fluttering of their lashes, barely suppressing a smirk, before turning their attention back to the topic at hand.</i>
-<<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
+<<expr SpriteChange "NoxxSpriteNeutral">>
 Noxx: So it seems that  Prince Orion has been spotted near the Draconian territory.
-<<expr ExpressionChangeNoxx "NoxxSpriteConfused">>
+<<expr SpriteChange "NoxxSpriteConfused">>
 Noxx: Which is incredibly odd, since dragons are usually above human affairs.
 <<jump Continuation>>
 ===
 title: Prince
 ---
-<<expr ExpressionChangeNoxx "NoxxSpriteConfused">>
+<<expr SpriteChange "NoxxSpriteConfused">>
 Noxx: Hmm…
-<<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
+<<expr SpriteChange "NoxxSpriteNeutral">>
 Noxx: I guess it really has been a while.
 -> “I was busy!”
 	Noxx: I know, I know!
-	<<expr ExpressionChangeNoxx "NoxxSpriteFlirt">>
-	Noxx As long as you’re not so busy that you end up forgetting about me as well.
+	<<expr SpriteChange "NoxxSpriteWink">>
+	Noxx: As long as you’re not so busy that you end up forgetting about me as well.
 -> “I don’t have the greatest memory…”
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	Noxx: That’s alright!
 	<i>They give your shoulder a comforting squeeze.</i>
-	<<expr ExpressionChangeNoxx "NoxxSpriteFlirt">>
+	<<expr SpriteChange "NoxxSpriteWink">>
 	Noxx: So long as you don’t forget about me.
 
 -> Give them a playful shove
-	<<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
+	<<expr SpriteChange "NoxxSpriteJoy">>
 	<i>You roll your eyes as they chuckle, rubbing at their arm.</i>
 -> “I could never!”
-	<<expr ExpressionChangeNoxx "NoxxSpriteSuprise">>
+	<<expr SpriteChange "NoxxSpriteAlarmed">>
 	<i>Noxx blinks, seemingly taken aback by your earnestness.</i>
-	<<expr ExpressionChangeNoxx "NoxxSpriteAnxious">>
+	<<expr SpriteChange "NoxxSpriteSad">>
 	<i>Their gaze softens as they pull you into their side for a quick side hug.</i>
-	<<expr ExpressionChangeNoxx "NoxxSpriteWorry">>
 	Noxx: I-
 	Noxx: … 
 -> “Can we get back to the prince already?”
-	<<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
+	<<expr SpriteChange "NoxxSpriteNeutral">>
 	Noxx: Yeah, sure
 	<i>They pull back from you.</i>
+<<expr SpriteChange "NoxxSpriteNeutral">>
 Noxx: So. the prince we are looking for-
 Noxx: -Orion, the crown prince of the Kingdom of Omelas-
-<<expr ExpressionChangeNoxx "NoxxSpriteAnxious">>
+<<expr SpriteChange "NoxxSpriteAnxious">>
 Noxx: - Disappeared a few months before he was meant to ascend to the throne.
 Noxx: Due to tensions with some of the other kingdoms, he was believed to either have been kidnapped by some Orc mercenaries or-
-<<expr ExpressionChangeNoxx "NoxxSpriteSad">>
+<<expr SpriteChange "NoxxSpriteSad">>
 <i>They pause for a split second, quick enough to be missed by someone not used to Noxx’s mannerisms.</i>
-<<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
+<<expr SpriteChange "NoxxSpriteAnxious">>
 Noxx: Some of the West Ridge tieflings.
 	-> “Do you know these tieflings?”
-		Noxx blinks at you slowly, expression unreadable.
+		Noxx blinks at you slowly.
 		Noxx: Not well.
 	-> Ignore their hesitation.
 		Noxx: However, it seems that both these suspicions are unfounded, as recent reports have said that Prince Orion has been spotted near the Draconian territory,
@@ -95,88 +102,91 @@ Noxx: Some of the West Ridge tieflings.
 ===
 title: Sources
 ---
-<<expr ExpressionChangeNoxx "NoxxSpriteFlirt">>
+<<expr SpriteChange "NoxxSpriteWink">>
 Noxx: “I’ve got my sources~”	
-<<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
+<<expr SpriteChange "NoxxSpriteNeutral">>
 Noxx: “A little tip for you, it’s always a good idea to keep in touch with friends you’ve made during your travels.”
 Noxx: “I’ve met all kinds of people, with all sorts of stories, and all sorts of skills.”
 -> “Noted.”
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	Noxx: Good.
 -> “I’ll leave the socializing to you.”
-	<<expr ExpressionChangeNoxx "NoxxSpriteSuprise">>
+	<<expr SpriteChange "NoxxSpriteAlarmed">>
 	Noxx: Oh?
-	<<expr ExpressionChangeNoxx "NoxxSpriteTeasing">>
+	<<expr SpriteChange "NoxxSpriteTeasing">>
 	Noxx: Does this mean you intend for me to be your companion in all your adventures?~
-	<<expr ExpressionChangeNoxx "NoxxSpriteFlirt">>
+	<<expr SpriteChange "NoxxSpriteWink">>
 	Noxx: I’m so touched~
 	-> Roll your eyes
-		<<expr ExpressionChangeNoxx "NoxxSpriteJoy">>
+		<<expr SpriteChange "NoxxSpriteJoy">>
 		<i>Your exasperation only makes Noxx’s grin grow wider</i>
 	-> “Well, yeah!”
-		<<expr ExpressionChangeNoxx "NoxxSpriteSuprise">>
+		<<expr SpriteChange "NoxxSpriteHappy">>
 		<i>The mirth fades from their eyes at your sincerity.</i>
-		<<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
+		<<expr SpriteChange "NoxxSpriteJoy">>
 		Noxx: Thank you.
+		<<expr SpriteChange "NoxxSpriteHappy">>
 		Noxx: I’d say that wish is mutual.
 	-> “Not if you keep being such a pain.”
-		<<expr ExpressionChangeNoxx "NoxxSpriteTeasing">>
+		<<expr SpriteChange "NoxxSpriteTeasing">>
 		<i>The mirth still twinkles in their eyes as their face drops into a pained expression</i>
-		<<expr ExpressionChangeNoxx "NoxxSpriteSad">>
+		<<expr SpriteChange "NoxxSpriteSad">>
 		Noxx: Nooo, c'mon!
 		Noxx: Let’s stick together forever!~
-		<<expr ExpressionChangeNoxx "NoxxSpriteJoy">>
+		<<expr SpriteChange "NoxxSpriteJoy">>
 		<i>They punctuate their sentence with a cackle as their grin breaks through their forlorn facade.</i>
-<<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
+<<expr SpriteChange "NoxxSpriteNeutral">>
 Noxx: Anyways-
 Noxx: It seems that Prince Orion has been spotted near the Draconian territory.
-<<expr ExpressionChangeNoxx "NoxxSpriteConfused">>
+<<expr SpriteChange "NoxxSpriteConfused">>
 Noxx: Which is incredibly odd, since dragons are usually above human affairs.
 <<jump Continuation>>
 ===
 title: Continuation
 ---
-<<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
+<<expr SpriteChange "NoxxSpriteNeutral">>
 Noxx: To reach the Draconian lands, we’ll have to pass through the Primeval Forest.
 -> “Is that a bad thing?”
-	<<expr ExpressionChangeNoxx "NoxxSpriteAnxious">>
+	<<expr SpriteChange "NoxxSpriteAnxious">>
 	Noxx: I wouldn’t say bad, necessarily.
-	<<expr ExpressionChangeNoxx "NoxxSpriteWorried">>
-	Noxx: But the forest does have a habit of being kind of tricky…
+	<<expr SpriteChange "NoxxSpriteWorried">>
+	Noxx: But the forest does have a habit of being kind of tricky...
 -> “Okay!”
-	<<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	<i>Noxx chuckles at your relaxed response.</i>
-	<<expr ExpressionChangeNoxx "NoxxSpriteAnxious">>
-	Noxx: The forest can be kind of tricky…
-	<<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
+	<<expr SpriteChange "NoxxSpriteWorried">>
+	Noxx: The forest can be kind of tricky...
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	Noxx: But I’m sure it’ll be no problem for the two of us!
 -> Let them keep talking
 	Noxx: The forest does have a habit of being tricky.
-	<<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
+	<<expr SpriteChange "NoxxSpriteNeutral">>
 	Noxx: But so long as we stick together, we should be just fine.
 
 ->”Tricky how?”
-	<<expr ExpressionChangeNoxx "NoxxSpriteAnxious">>
-	Noxx: In the sense that…
-	<<expr ExpressionChangeNoxx "NoxxSpriteWorried">>
-	Noxx: …I’d say the forest is quite perceptive, and not especially welcoming.
-	<<expr ExpressionChangeNoxx "NoxxSpriteAnxious">>
+	<<expr SpriteChange "NoxxSpriteAnxious">>
+	Noxx: In the sense that..
+	Noxx: ...I’d say the forest is quite perceptive, and not especially welcoming.
+	<<expr SpriteChange "NoxxSpriteWorried">>
 	Noxx: You’ll see what I mean.
 -> “I’m sure we’ll be fine!”
-	<<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
+	<<expr SpriteChange "NoxxSpriteJoy">>
 	Noxx: That’s the spirit!
-<<expr ExpressionChangeNoxx "NoxxSpriteNeutral">>
+<<expr SpriteChange "NoxxSpriteNeutral">>
 Noxx: So we should-
 <<notif MessengerIcon>>
 <<addtime ClockyClock>>
 -> “Give me one second.”
-	<<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	Noxx: Sure thing! Take your time.
 	Noxx: I’ve got some things to take care of as well.
 	Noxx: Just let me know once you’re ready to head out.
 -> “Shit, I got a message.”
-	<<expr ExpressionChangeNoxx "NoxxSpriteHappy">>
+	<<expr SpriteChange "NoxxSpriteHappy">>
 	Noxx: No worries, take your time.
 	Noxx: I’ve got some things to take care of as well.
 	Noxx: Just let me know once you’re ready to head out.
 <<fmfadeout AdjustImages>>
+<<cgoff AdjustImages>>
+<<stop>>
 ===

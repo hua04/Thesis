@@ -21,6 +21,14 @@ public class PasswordCheck : MonoBehaviour
         incorrect.SetActive(false);
         PasswordInput.contentType = TMP_InputField.ContentType.Password;
     }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            CheckPassword();
+        }
+    }
     public void UserLogin()
     {
         StartCoroutine(CheckText());
@@ -36,13 +44,9 @@ public class PasswordCheck : MonoBehaviour
     public void CheckPassword()
     {
         string pass = PasswordInput.text;
-        if (pass == "")
-        {
-            incorrect.SetActive(true);
-        }
-        else
-        {
+      
+        
             SceneManager.LoadScene("GameScene");
-        }
+        
     }
 }

@@ -31,4 +31,17 @@ public class StopPlayMusic : MonoBehaviour
 
 
     }
+
+    [YarnCommand("stop")]
+    public void StopMusic()
+    {
+        turnon.Stop();
+
+    }
+    [YarnCommand("play")]
+    public void PlayMusic()
+    {
+        turnon.Play();
+
+    }
 }

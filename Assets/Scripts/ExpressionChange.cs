@@ -14,6 +14,8 @@ public class ExpressionChange : MonoBehaviour
     private Image imageComponent;
 
     public Sprite expressionSprite;
+
+    public Animator spriteAnimator;
     public void Start()
     {
 
@@ -31,5 +33,18 @@ public class ExpressionChange : MonoBehaviour
                 imageComponent.sprite = spriteArray[i];
             }
         }
+    }
+    [YarnCommand("spriteoff")]
+    public void SpriteOff()
+    {
+        spriteAnimator.SetTrigger("SpriteFadeOut");
+        spriteAnimator.ResetTrigger("SpriteFadeIn");
+
+    }
+    [YarnCommand("spriteon")]
+    public void SpriteOn()
+    {
+        spriteAnimator.SetTrigger("SpriteFadeIn");
+        spriteAnimator.ResetTrigger("SpriteFadeOut");
     }
 }

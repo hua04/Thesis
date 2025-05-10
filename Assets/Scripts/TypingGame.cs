@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class TypingGame : MonoBehaviour
 {
@@ -16,21 +15,21 @@ public class TypingGame : MonoBehaviour
 
     private string remainingWord;
     public string typedWord;
-    [TextArea(3,7)]
+    [TextArea(3, 7)]
     public string currentWord = "";
 
     public GameObject desktopApp;
     public GameObject gameApp;
     public Notifications notifications;
     public TypingAppManager typingAppManager;
- 
+
     public EventQueue eventQueue;
     public bool notIntro;
 
 
     void Start()
     {
-    
+
         SetCurrentWord();
         currentY = cursor.transform.position.y;
     }
@@ -44,8 +43,8 @@ public class TypingGame : MonoBehaviour
     {
         remainingWord = newString;
         wordOutput.text = "<b>" + typedWord + "</b>";
-        
-         
+
+
     }
 
     // Update is called once per frame
@@ -57,12 +56,12 @@ public class TypingGame : MonoBehaviour
 
     void CheckInput()
     {
-        if (Input.anyKeyDown&gameApp.activeInHierarchy)
+        if (Input.anyKeyDown & gameApp.activeInHierarchy)
         {
             string keysPressed = Input.inputString;
             if (keysPressed.Length == 1)
             {
-              
+
                 EnterLetter(); //detects letter press
                 EnterLetter();
                 EnterLetter();
@@ -115,7 +114,7 @@ public class TypingGame : MonoBehaviour
         cursor.gameObject.SetActive(true);
         currentY = cursor.transform.position.y;
         Debug.Log(currentY + "," + lastY);
-         if (currentY != lastY && currentY <= 140f)
+        if (currentY != lastY && currentY <= 300f)
         {
             scroll.verticalNormalizedPosition -= 0.01f;
         }
@@ -130,20 +129,19 @@ public class TypingGame : MonoBehaviour
     {
         if (IsComplete())
         {
-        typingAppManager.RemoveFile(desktopApp);
-        Destroy(desktopApp);
-        int lastPosition = AppClickOpen.openFiles.IndexOf(gameApp);
-        AppClickOpen.openFiles.RemoveAt(lastPosition);
-        Destroy(gameApp);
-        timeScript.UpdateTime();
-        notifications.NotifOn();
 
+            if (notIntro)
+            {
+                eventQueue.SetPath("work");
+            }
+            typingAppManager.RemoveFile(desktopApp);
+            Destroy(desktopApp);
+            int lastPosition = AppClickOpen.openFiles.IndexOf(gameApp);
+            AppClickOpen.openFiles.RemoveAt(lastPosition);
+            Destroy(gameApp);
+            timeScript.UpdateTime();
+            notifications.NotifOn();
+            Destroy(gameObject);
         }
-        if (notIntro)
-        {
-            eventQueue.SetPath("work");
-        }
-
-        Destroy(gameObject);
     }
 }
